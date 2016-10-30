@@ -10,4 +10,6 @@ import Foundation
 
 protocol Sourceable {
     
+    func getActions() -> [Action]
+    
 }

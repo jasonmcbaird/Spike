@@ -40,4 +40,8 @@ class Source: Sourceable, StaminaUser {
     func payStamina(amount: Int) {
         executionCount += 1
     }
+    
+    func getActions() -> [Action] {
+        return []
+    }
 }

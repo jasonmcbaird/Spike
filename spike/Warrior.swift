@@ -20,4 +20,8 @@ class Warrior: Creature, StaminaUser {
         self.stamina = stamina
     }
     
+    func getActions() -> [Action] {
+        return []
+    }
+    
 }

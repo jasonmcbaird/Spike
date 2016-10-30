@@ -18,21 +18,21 @@ class ActionFactoryTest: XCTestCase {
     }
     
     func testAttack() {
-        let action = factory.createAction(name: "Attack")
-        let sourceAndTarget = SourceAndTarget()
-        action.execute(source: sourceAndTarget, targets: [sourceAndTarget])
-        XCTAssertEqual(sourceAndTarget.executionCount, 1)
+        let action = factory.createAction(name: "Static Attack", amount: 3)
+        let creature = MockCreature()
+        action.execute(source: creature, targets: [creature])
+        XCTAssertEqual(creature.damage, 3)
     }
     
-}
-
-class SourceAndTarget: Sourceable, Targetable, Damageable {
-    
-    var health = 0
-    
-    var executionCount = 0
-    
-    func takeDamage(amount: Int, type: DamageType) {
-        executionCount += 1
+    func testVariableAttack() {
+        let action = factory.createAction(name: "Attack", amount: 3, nextAmount: 4)
+        let sourceAndTarget = MockCreature()
+        
+        for _ in 1...100 {
+            action.execute(source: sourceAndTarget, targets: [sourceAndTarget])
+        }
+        XCTAssertLessThan(sourceAndTarget.damage, 400)
+        XCTAssertGreaterThan(sourceAndTarget.damage, 300)
     }
+    
 }

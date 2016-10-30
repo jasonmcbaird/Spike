@@ -1,22 +1,27 @@
 //
-//  Card.swift
+//  Ability.swift
 //  spike
 //
-//  Created by dev1 on 10/24/16.
+//  Created by Jason Baird on 10/30/16.
 //  Copyright © 2016 NorthForge. All rights reserved.
 //
 
 import Foundation
 
-class Card {
+class Ability {
     
     var actions: [Action] = []
     var costs: [Cost] = []
     
-    func play(source: Sourceable, targets: [Targetable]) -> Bool {
+    init(costs: [Cost], actions: [Action]) {
+        self.costs = costs
+        self.actions = actions
+    }
+    
+    func execute(source: Sourceable, targets: [Targetable]) {
         for cost in costs {
-            if(!cost.canPay(source: source)) {
-                return false
+            guard(cost.canPay(source: source)) else {
+                return
             }
         }
         for cost in costs {
@@ -25,7 +30,6 @@ class Card {
         for action in actions {
             action.execute(source: source, targets: targets)
         }
-        return true
     }
     
 }

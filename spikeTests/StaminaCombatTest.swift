@@ -8,7 +8,7 @@
 
 import XCTest
 
-class BasicCombatTest: XCTestCase {
+class StaminaCombatTest: XCTestCase {
     
     var jace: Creature!
     var cody: Creature!
@@ -17,26 +17,24 @@ class BasicCombatTest: XCTestCase {
         super.setUp()
         jace = Warrior(maxHealth: 30, stamina: 6)
         
-        cody = Human(maxHealth: 25)
+        cody = Marine(maxHealth: 25)
     }
     
     func testCombat() {
-        let attack = ActionFactory().createAction(name: "Attack")
+        let attack = ActionFactory().createAction(name: "Attack", amount: 3)
         attack.execute(source: jace, targets: [cody])
         
         XCTAssertEqual(cody.health, 22)
         
-        let card = Card()
-        card.actions.append(attack)
-        card.costs.append(CostFactory().createCost(name: "Stamina"))
+        let ability = Ability(costs: [CostFactory().createCost(name: "Stamina")], actions: [attack])
         
-        XCTAssert(card.play(source: jace, targets: [cody]))
+        ability.execute(source: jace, targets: [cody])
         XCTAssertEqual(cody.health, 19)
         
-        XCTAssert(card.play(source: jace, targets: [cody]))
+        ability.execute(source: jace, targets: [cody])
         XCTAssertEqual(cody.health, 16)
         
-        XCTAssertFalse(card.play(source: jace, targets: [cody]))
+        ability.execute(source: jace, targets: [cody])
         XCTAssertEqual(cody.health, 16)
     }
     

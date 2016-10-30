@@ -1,19 +1,20 @@
 //
-//  Character.swift
+//  Marine.swift
 //  spike
 //
-//  Created by dev1 on 10/24/16.
+//  Created by Jason Baird on 10/30/16.
 //  Copyright © 2016 NorthForge. All rights reserved.
 //
 
 import Foundation
 
-class Human: Creature {
-
+class Marine: Creature, Armable {
+    
     var maxHealth: Int
     var health: Int
+    let inventory: Inventory = Inventory()
     
-    init(maxHealth: Int) {
+    init(maxHealth: Int = 10) {
         self.maxHealth = maxHealth
         self.health = maxHealth
     }
