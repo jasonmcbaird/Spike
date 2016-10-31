@@ -13,7 +13,6 @@ protocol StaminaUser: class {
     var stamina: Int { get set }
     
     func canPayStamina(amount: Int) -> Bool
-    
     func payStamina(amount: Int)
     
 }

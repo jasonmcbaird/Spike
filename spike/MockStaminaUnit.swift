@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Warrior: Creature, StaminaUser {
+class MockStaminaFightable: Fightable, StaminaUser {
     
     var maxHealth: Int
     var health: Int
@@ -20,7 +20,7 @@ class Warrior: Creature, StaminaUser {
         self.stamina = stamina
     }
     
-    func getActions() -> [Action] {
+    func getAbilities() -> [Ability] {
         return []
     }
     

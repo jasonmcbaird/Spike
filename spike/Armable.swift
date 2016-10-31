@@ -16,8 +16,8 @@ protocol Armable: class, Sourceable {
 
 extension Armable {
     
-    func getActions() -> [Action] {
-        return inventory.getActions()
+    func getAbilities() -> [Ability] {
+        return inventory.getAbilities()
     }
     
 }

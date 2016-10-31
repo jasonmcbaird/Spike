@@ -1,5 +1,5 @@
 //
-//  Useable.swift
+//  Accurate.swift
 //  spike
 //
 //  Created by Jason Baird on 10/30/16.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol Useable: Item {
+protocol Accurate {
     
-    var abilities: [Ability] { get }
+    var accuracy: Int { get }
     
 }

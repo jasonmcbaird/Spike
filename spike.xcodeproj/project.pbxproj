@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A6C015F1DBEC8F900E845ED /* StaminaCombatTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C015E1DBEC8F900E845ED /* StaminaCombatTest.swift */; };
-		5A6C01671DBECEE500E845ED /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C01661DBECEE500E845ED /* Creature.swift */; };
-		5A6C01681DBECF4900E845ED /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C01661DBECEE500E845ED /* Creature.swift */; };
+		5A6C01671DBECEE500E845ED /* Fightable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C01661DBECEE500E845ED /* Fightable.swift */; };
+		5A6C01681DBECF4900E845ED /* Fightable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C01661DBECEE500E845ED /* Fightable.swift */; };
 		5ACC05191DBE9DFB00B52D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC05181DBE9DFB00B52D3D /* AppDelegate.swift */; };
 		5ACC051B1DBE9DFB00B52D3D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5ACC051A1DBE9DFB00B52D3D /* GameScene.sks */; };
 		5ACC051D1DBE9DFB00B52D3D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5ACC051C1DBE9DFB00B52D3D /* Actions.sks */; };
@@ -43,16 +42,47 @@
 		5AD96FB61DBEC6A5005D4AFF /* MockStaminaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD96FB41DBEC6A5005D4AFF /* MockStaminaUser.swift */; };
 		5ADE441A1DBFFA7600652629 /* DamageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE44191DBFFA7600652629 /* DamageType.swift */; };
 		5ADE441B1DBFFA7600652629 /* DamageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE44191DBFFA7600652629 /* DamageType.swift */; };
+		96229B981DC67B5B00203457 /* Commandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229B971DC67B5B00203457 /* Commandable.swift */; };
+		96229B9A1DC67CDD00203457 /* MockCommandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229B991DC67CDD00203457 /* MockCommandable.swift */; };
+		96229B9B1DC67D1600203457 /* Commandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229B971DC67B5B00203457 /* Commandable.swift */; };
+		96229B9D1DC67D2100203457 /* CommandableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229B9C1DC67D2100203457 /* CommandableTest.swift */; };
+		96229B9F1DC67FB000203457 /* RandomAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229B9E1DC67FB000203457 /* RandomAI.swift */; };
+		96229BA11DC6802100203457 /* RandomAITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BA01DC6802100203457 /* RandomAITest.swift */; };
+		96229BA31DC6809800203457 /* MockRandomAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BA21DC6809800203457 /* MockRandomAI.swift */; };
+		96229BA41DC680AB00203457 /* RandomAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229B9E1DC67FB000203457 /* RandomAI.swift */; };
+		96229BA61DC6830900203457 /* BasicCombatSim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BA51DC6830900203457 /* BasicCombatSim.swift */; };
+		96229BA81DC68BEB00203457 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BA71DC68BEB00203457 /* Nameable.swift */; };
+		96229BA91DC68BEB00203457 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BA71DC68BEB00203457 /* Nameable.swift */; };
+		96229BAE1DC6916100203457 /* Shielded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BAD1DC6916100203457 /* Shielded.swift */; };
+		96229BAF1DC6916100203457 /* Shielded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BAD1DC6916100203457 /* Shielded.swift */; };
+		96229BB11DC6918E00203457 /* MockShielded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BB01DC6918E00203457 /* MockShielded.swift */; };
+		96229BB21DC6918E00203457 /* MockShielded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BB01DC6918E00203457 /* MockShielded.swift */; };
+		96229BB51DC691D900203457 /* ShieldedTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BB31DC691D900203457 /* ShieldedTest.swift */; };
+		96229BBB1DC6A71D00203457 /* Spartan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BBA1DC6A71D00203457 /* Spartan.swift */; };
+		96229BBC1DC6A71D00203457 /* Spartan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BBA1DC6A71D00203457 /* Spartan.swift */; };
+		96229BBE1DC6AE4000203457 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BBD1DC6AE4000203457 /* Logger.swift */; };
+		96229BBF1DC6AE4000203457 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BBD1DC6AE4000203457 /* Logger.swift */; };
+		96229BC11DC6C88D00203457 /* Accurate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BC01DC6C88D00203457 /* Accurate.swift */; };
+		96229BC21DC6C88D00203457 /* Accurate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BC01DC6C88D00203457 /* Accurate.swift */; };
+		96229BC41DC6D5D300203457 /* Elite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BC31DC6D5D300203457 /* Elite.swift */; };
+		96229BC51DC6D5D300203457 /* Elite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BC31DC6D5D300203457 /* Elite.swift */; };
+		9636DD311DC6681D00323BB8 /* MockActivatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636DD301DC6681D00323BB8 /* MockActivatable.swift */; };
+		9636DD331DC6683100323BB8 /* ActivatableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636DD321DC6683100323BB8 /* ActivatableTest.swift */; };
+		9636DD351DC66C7B00323BB8 /* Reloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636DD341DC66C7B00323BB8 /* Reloadable.swift */; };
+		9636DD371DC66D1100323BB8 /* ReloadableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636DD361DC66D1100323BB8 /* ReloadableTest.swift */; };
+		9636DD391DC66F0F00323BB8 /* MockReloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636DD381DC66F0F00323BB8 /* MockReloadable.swift */; };
+		9636DD3A1DC66F2300323BB8 /* Reloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636DD341DC66C7B00323BB8 /* Reloadable.swift */; };
+		9636DD3C1DC6721F00323BB8 /* AmmoCost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636DD3B1DC6721F00323BB8 /* AmmoCost.swift */; };
+		9636DD3D1DC6721F00323BB8 /* AmmoCost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636DD3B1DC6721F00323BB8 /* AmmoCost.swift */; };
 		9639BA241DC62B73000FC95B /* WeaponFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA231DC62B73000FC95B /* WeaponFactoryTest.swift */; };
 		9639BA251DC62B8E000FC95B /* WeaponFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969FF7B01DC62A9E00E44E06 /* WeaponFactory.swift */; };
 		9639BA261DC62B93000FC95B /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969FF7AE1DC62A4300E44E06 /* Weapon.swift */; };
 		9639BA2B1DC62E44000FC95B /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA2A1DC62E44000FC95B /* Ability.swift */; };
 		9639BA2D1DC62E53000FC95B /* AbilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA2C1DC62E53000FC95B /* AbilityTest.swift */; };
 		9639BA2E1DC62E89000FC95B /* Marine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969FF7A61DC6296600E44E06 /* Marine.swift */; };
-		9639BA301DC62F18000FC95B /* MockCreature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA2F1DC62F18000FC95B /* MockCreature.swift */; };
+		9639BA301DC62F18000FC95B /* MockFightable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA2F1DC62F18000FC95B /* MockFightable.swift */; };
 		9639BA311DC62FAB000FC95B /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA2A1DC62E44000FC95B /* Ability.swift */; };
-		9639BA331DC630B0000FC95B /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA321DC630B0000FC95B /* Warrior.swift */; };
-		9639BA341DC630B0000FC95B /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA321DC630B0000FC95B /* Warrior.swift */; };
+		9639BA341DC630B0000FC95B /* MockStaminaUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA321DC630B0000FC95B /* MockStaminaUnit.swift */; };
 		9639BA381DC632E5000FC95B /* ArmableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA361DC632E5000FC95B /* ArmableTest.swift */; };
 		9639BA3B1DC6349D000FC95B /* MockArmable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA391DC6349D000FC95B /* MockArmable.swift */; };
 		9639BA3D1DC634A6000FC95B /* Armable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA3C1DC634A6000FC95B /* Armable.swift */; };
@@ -63,7 +93,29 @@
 		9639BA481DC63DF3000FC95B /* InventoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA471DC63DF3000FC95B /* InventoryTest.swift */; };
 		9639BA4A1DC63E90000FC95B /* MockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA491DC63E90000FC95B /* MockItem.swift */; };
 		9639BA4C1DC63EB2000FC95B /* MockUseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA4B1DC63EB2000FC95B /* MockUseable.swift */; };
-		9639BA4E1DC64032000FC95B /* WeaponCombatTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA4D1DC64032000FC95B /* WeaponCombatTest.swift */; };
+		9639BA501DC6435A000FC95B /* Missable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA4F1DC6435A000FC95B /* Missable.swift */; };
+		9639BA521DC64410000FC95B /* Attack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA511DC64410000FC95B /* Attack.swift */; };
+		9639BA541DC6442B000FC95B /* AttackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA531DC6442B000FC95B /* AttackTest.swift */; };
+		9639BA561DC644EF000FC95B /* MockAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA551DC644EF000FC95B /* MockAttack.swift */; };
+		9639BA571DC64501000FC95B /* Attack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA511DC64410000FC95B /* Attack.swift */; };
+		9639BA591DC64823000FC95B /* Organic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA581DC64823000FC95B /* Organic.swift */; };
+		9639BA5B1DC648EC000FC95B /* MockMissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA5A1DC648EC000FC95B /* MockMissable.swift */; };
+		9639BA5C1DC648F9000FC95B /* Missable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA4F1DC6435A000FC95B /* Missable.swift */; };
+		9639BA5E1DC64A19000FC95B /* MissableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA5D1DC64A19000FC95B /* MissableTest.swift */; };
+		9639BA601DC64B32000FC95B /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA5F1DC64B32000FC95B /* Randomizer.swift */; };
+		9639BA621DC64E17000FC95B /* RandomizerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA611DC64E17000FC95B /* RandomizerTest.swift */; };
+		9639BA631DC64E48000FC95B /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA5F1DC64B32000FC95B /* Randomizer.swift */; };
+		9639BA651DC65948000FC95B /* MockMissableUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA641DC65948000FC95B /* MockMissableUnit.swift */; };
+		9639BA661DC65BA4000FC95B /* Organic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA581DC64823000FC95B /* Organic.swift */; };
+		9639BA6A1DC65E38000FC95B /* Grunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA691DC65E38000FC95B /* Grunt.swift */; };
+		9639BA6B1DC65FC0000FC95B /* Grunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA691DC65E38000FC95B /* Grunt.swift */; };
+		9639BA6D1DC6603A000FC95B /* Combat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA6C1DC6603A000FC95B /* Combat.swift */; };
+		9639BA6E1DC6603A000FC95B /* Combat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA6C1DC6603A000FC95B /* Combat.swift */; };
+		9639BA701DC66088000FC95B /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA6F1DC66088000FC95B /* Team.swift */; };
+		9639BA711DC66088000FC95B /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA6F1DC66088000FC95B /* Team.swift */; };
+		9639BA741DC660CE000FC95B /* CombatTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA721DC660CE000FC95B /* CombatTest.swift */; };
+		9639BA761DC661FA000FC95B /* Activatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA751DC661FA000FC95B /* Activatable.swift */; };
+		9639BA771DC661FA000FC95B /* Activatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA751DC661FA000FC95B /* Activatable.swift */; };
 		969FF7A71DC6296600E44E06 /* Marine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969FF7A61DC6296600E44E06 /* Marine.swift */; };
 		969FF7A91DC629E900E44E06 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969FF7A81DC629E900E44E06 /* Inventory.swift */; };
 		969FF7AB1DC62A2500E44E06 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969FF7AA1DC62A2500E44E06 /* Item.swift */; };
@@ -91,8 +143,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5A6C015E1DBEC8F900E845ED /* StaminaCombatTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaminaCombatTest.swift; sourceTree = "<group>"; };
-		5A6C01661DBECEE500E845ED /* Creature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
+		5A6C01661DBECEE500E845ED /* Fightable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fightable.swift; sourceTree = "<group>"; };
 		5ACC05151DBE9DFB00B52D3D /* spike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACC05181DBE9DFB00B52D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ACC051A1DBE9DFB00B52D3D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -123,11 +174,32 @@
 		5AD96FB11DBEC654005D4AFF /* StaminaUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaminaUserTest.swift; sourceTree = "<group>"; };
 		5AD96FB41DBEC6A5005D4AFF /* MockStaminaUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockStaminaUser.swift; sourceTree = "<group>"; };
 		5ADE44191DBFFA7600652629 /* DamageType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DamageType.swift; path = spike/DamageType.swift; sourceTree = "<group>"; };
+		96229B971DC67B5B00203457 /* Commandable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commandable.swift; sourceTree = "<group>"; };
+		96229B991DC67CDD00203457 /* MockCommandable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCommandable.swift; sourceTree = "<group>"; };
+		96229B9C1DC67D2100203457 /* CommandableTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandableTest.swift; sourceTree = "<group>"; };
+		96229B9E1DC67FB000203457 /* RandomAI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomAI.swift; sourceTree = "<group>"; };
+		96229BA01DC6802100203457 /* RandomAITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomAITest.swift; sourceTree = "<group>"; };
+		96229BA21DC6809800203457 /* MockRandomAI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRandomAI.swift; sourceTree = "<group>"; };
+		96229BA51DC6830900203457 /* BasicCombatSim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCombatSim.swift; sourceTree = "<group>"; };
+		96229BA71DC68BEB00203457 /* Nameable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nameable.swift; sourceTree = "<group>"; };
+		96229BAD1DC6916100203457 /* Shielded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shielded.swift; sourceTree = "<group>"; };
+		96229BB01DC6918E00203457 /* MockShielded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockShielded.swift; sourceTree = "<group>"; };
+		96229BB31DC691D900203457 /* ShieldedTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShieldedTest.swift; sourceTree = "<group>"; };
+		96229BBA1DC6A71D00203457 /* Spartan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spartan.swift; sourceTree = "<group>"; };
+		96229BBD1DC6AE4000203457 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		96229BC01DC6C88D00203457 /* Accurate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accurate.swift; sourceTree = "<group>"; };
+		96229BC31DC6D5D300203457 /* Elite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elite.swift; sourceTree = "<group>"; };
+		9636DD301DC6681D00323BB8 /* MockActivatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockActivatable.swift; sourceTree = "<group>"; };
+		9636DD321DC6683100323BB8 /* ActivatableTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivatableTest.swift; sourceTree = "<group>"; };
+		9636DD341DC66C7B00323BB8 /* Reloadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reloadable.swift; sourceTree = "<group>"; };
+		9636DD361DC66D1100323BB8 /* ReloadableTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReloadableTest.swift; sourceTree = "<group>"; };
+		9636DD381DC66F0F00323BB8 /* MockReloadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockReloadable.swift; sourceTree = "<group>"; };
+		9636DD3B1DC6721F00323BB8 /* AmmoCost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmmoCost.swift; sourceTree = "<group>"; };
 		9639BA231DC62B73000FC95B /* WeaponFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponFactoryTest.swift; sourceTree = "<group>"; };
 		9639BA2A1DC62E44000FC95B /* Ability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
 		9639BA2C1DC62E53000FC95B /* AbilityTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbilityTest.swift; sourceTree = "<group>"; };
-		9639BA2F1DC62F18000FC95B /* MockCreature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCreature.swift; sourceTree = "<group>"; };
-		9639BA321DC630B0000FC95B /* Warrior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
+		9639BA2F1DC62F18000FC95B /* MockFightable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFightable.swift; sourceTree = "<group>"; };
+		9639BA321DC630B0000FC95B /* MockStaminaUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockStaminaUnit.swift; path = ../spike/MockStaminaUnit.swift; sourceTree = "<group>"; };
 		9639BA361DC632E5000FC95B /* ArmableTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArmableTest.swift; sourceTree = "<group>"; };
 		9639BA391DC6349D000FC95B /* MockArmable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockArmable.swift; sourceTree = "<group>"; };
 		9639BA3C1DC634A6000FC95B /* Armable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Armable.swift; sourceTree = "<group>"; };
@@ -136,7 +208,21 @@
 		9639BA471DC63DF3000FC95B /* InventoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryTest.swift; sourceTree = "<group>"; };
 		9639BA491DC63E90000FC95B /* MockItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockItem.swift; sourceTree = "<group>"; };
 		9639BA4B1DC63EB2000FC95B /* MockUseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUseable.swift; sourceTree = "<group>"; };
-		9639BA4D1DC64032000FC95B /* WeaponCombatTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponCombatTest.swift; sourceTree = "<group>"; };
+		9639BA4F1DC6435A000FC95B /* Missable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Missable.swift; sourceTree = "<group>"; };
+		9639BA511DC64410000FC95B /* Attack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attack.swift; sourceTree = "<group>"; };
+		9639BA531DC6442B000FC95B /* AttackTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackTest.swift; sourceTree = "<group>"; };
+		9639BA551DC644EF000FC95B /* MockAttack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAttack.swift; sourceTree = "<group>"; };
+		9639BA581DC64823000FC95B /* Organic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organic.swift; sourceTree = "<group>"; };
+		9639BA5A1DC648EC000FC95B /* MockMissable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMissable.swift; sourceTree = "<group>"; };
+		9639BA5D1DC64A19000FC95B /* MissableTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissableTest.swift; sourceTree = "<group>"; };
+		9639BA5F1DC64B32000FC95B /* Randomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
+		9639BA611DC64E17000FC95B /* RandomizerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomizerTest.swift; sourceTree = "<group>"; };
+		9639BA641DC65948000FC95B /* MockMissableUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMissableUnit.swift; sourceTree = "<group>"; };
+		9639BA691DC65E38000FC95B /* Grunt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grunt.swift; sourceTree = "<group>"; };
+		9639BA6C1DC6603A000FC95B /* Combat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Combat.swift; sourceTree = "<group>"; };
+		9639BA6F1DC66088000FC95B /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		9639BA721DC660CE000FC95B /* CombatTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombatTest.swift; sourceTree = "<group>"; };
+		9639BA751DC661FA000FC95B /* Activatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activatable.swift; sourceTree = "<group>"; };
 		969FF7A61DC6296600E44E06 /* Marine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marine.swift; sourceTree = "<group>"; };
 		969FF7A81DC629E900E44E06 /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		969FF7AA1DC62A2500E44E06 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -192,13 +278,17 @@
 		5ACC05171DBE9DFB00B52D3D /* spike */ = {
 			isa = PBXGroup;
 			children = (
+				96229BB61DC6A29D00203457 /* Utility */,
 				9639BA2A1DC62E44000FC95B /* Ability.swift */,
 				969FF7A81DC629E900E44E06 /* Inventory.swift */,
+				9639BA6C1DC6603A000FC95B /* Combat.swift */,
+				9639BA6F1DC66088000FC95B /* Team.swift */,
+				9636DD3B1DC6721F00323BB8 /* AmmoCost.swift */,
 				9639BA291DC62E2E000FC95B /* Build */,
 				5AD96F951DBEB2F6005D4AFF /* Factories */,
 				5AD96F821DBEB0E1005D4AFF /* Enums */,
 				5ACC05761DBEAF1B00B52D3D /* Protocols */,
-				5ACC054F1DBE9EB000B52D3D /* Creatures */,
+				5ACC054F1DBE9EB000B52D3D /* Units */,
 			);
 			path = spike;
 			sourceTree = "<group>";
@@ -223,27 +313,32 @@
 			path = spikeUITests;
 			sourceTree = "<group>";
 		};
-		5ACC054F1DBE9EB000B52D3D /* Creatures */ = {
+		5ACC054F1DBE9EB000B52D3D /* Units */ = {
 			isa = PBXGroup;
 			children = (
-				9639BA321DC630B0000FC95B /* Warrior.swift */,
 				969FF7A61DC6296600E44E06 /* Marine.swift */,
+				96229BBA1DC6A71D00203457 /* Spartan.swift */,
+				9639BA691DC65E38000FC95B /* Grunt.swift */,
+				96229BC31DC6D5D300203457 /* Elite.swift */,
 			);
-			name = Creatures;
+			name = Units;
 			sourceTree = "<group>";
 		};
 		5ACC05761DBEAF1B00B52D3D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				9639BA461DC63956000FC95B /* Amalgams */,
-				5AD96FA31DBEBB67005D4AFF /* Extensions */,
 				5AD96F851DBEB163005D4AFF /* Sourceable.swift */,
+				96229BA71DC68BEB00203457 /* Nameable.swift */,
 				5AD96F871DBEB183005D4AFF /* Targetable.swift */,
 				5AD96F8E1DBEB1F3005D4AFF /* Action.swift */,
 				5AD96F901DBEB291005D4AFF /* Cost.swift */,
+				5A6C01661DBECEE500E845ED /* Fightable.swift */,
 				969FF7AA1DC62A2500E44E06 /* Item.swift */,
 				9639BA3F1DC63638000FC95B /* Useable.swift */,
 				969FF7AE1DC62A4300E44E06 /* Weapon.swift */,
+				96229BC01DC6C88D00203457 /* Accurate.swift */,
+				9639BA461DC63956000FC95B /* Amalgams */,
+				5AD96FA31DBEBB67005D4AFF /* Extensions */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -251,8 +346,7 @@
 		5AD96F7C1DBEAF6E005D4AFF /* SystemTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A6C015E1DBEC8F900E845ED /* StaminaCombatTest.swift */,
-				9639BA4D1DC64032000FC95B /* WeaponCombatTest.swift */,
+				96229BA51DC6830900203457 /* BasicCombatSim.swift */,
 			);
 			name = SystemTests;
 			sourceTree = "<group>";
@@ -279,9 +373,16 @@
 		5AD96FA31DBEBB67005D4AFF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				96229BAD1DC6916100203457 /* Shielded.swift */,
 				5AD96F801DBEB0BC005D4AFF /* Damageable.swift */,
 				5AD96FAB1DBEC33E005D4AFF /* StaminaUser.swift */,
 				9639BA3C1DC634A6000FC95B /* Armable.swift */,
+				9639BA4F1DC6435A000FC95B /* Missable.swift */,
+				9639BA511DC64410000FC95B /* Attack.swift */,
+				9636DD341DC66C7B00323BB8 /* Reloadable.swift */,
+				9639BA751DC661FA000FC95B /* Activatable.swift */,
+				96229B971DC67B5B00203457 /* Commandable.swift */,
+				96229B9E1DC67FB000203457 /* RandomAI.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -289,15 +390,33 @@
 		5AD96FA41DBEBF23005D4AFF /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				9639BA321DC630B0000FC95B /* MockStaminaUnit.swift */,
+				96229BB01DC6918E00203457 /* MockShielded.swift */,
+				9636DD381DC66F0F00323BB8 /* MockReloadable.swift */,
 				5AD96FA01DBEB8AB005D4AFF /* MockDamageable.swift */,
+				9639BA5A1DC648EC000FC95B /* MockMissable.swift */,
+				9639BA641DC65948000FC95B /* MockMissableUnit.swift */,
+				9639BA551DC644EF000FC95B /* MockAttack.swift */,
 				5AD96FB41DBEC6A5005D4AFF /* MockStaminaUser.swift */,
-				9639BA2F1DC62F18000FC95B /* MockCreature.swift */,
+				9639BA2F1DC62F18000FC95B /* MockFightable.swift */,
 				9639BA391DC6349D000FC95B /* MockArmable.swift */,
 				9639BA421DC63825000FC95B /* MockAction.swift */,
 				9639BA491DC63E90000FC95B /* MockItem.swift */,
 				9639BA4B1DC63EB2000FC95B /* MockUseable.swift */,
+				9636DD301DC6681D00323BB8 /* MockActivatable.swift */,
+				96229B991DC67CDD00203457 /* MockCommandable.swift */,
+				96229BA21DC6809800203457 /* MockRandomAI.swift */,
 			);
 			name = Mocks;
+			sourceTree = "<group>";
+		};
+		96229BB61DC6A29D00203457 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9639BA5F1DC64B32000FC95B /* Randomizer.swift */,
+				96229BBD1DC6AE4000203457 /* Logger.swift */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 		9639BA291DC62E2E000FC95B /* Build */ = {
@@ -320,6 +439,8 @@
 			isa = PBXGroup;
 			children = (
 				5AD96F981DBEB500005D4AFF /* ActionFactoryTest.swift */,
+				9636DD361DC66D1100323BB8 /* ReloadableTest.swift */,
+				9639BA721DC660CE000FC95B /* CombatTest.swift */,
 				9639BA231DC62B73000FC95B /* WeaponFactoryTest.swift */,
 				5AD96FA81DBEC21D005D4AFF /* CostFactoryTest.swift */,
 				5AD96FB11DBEC654005D4AFF /* StaminaUserTest.swift */,
@@ -327,6 +448,13 @@
 				9639BA2C1DC62E53000FC95B /* AbilityTest.swift */,
 				9639BA361DC632E5000FC95B /* ArmableTest.swift */,
 				9639BA471DC63DF3000FC95B /* InventoryTest.swift */,
+				9639BA531DC6442B000FC95B /* AttackTest.swift */,
+				9639BA5D1DC64A19000FC95B /* MissableTest.swift */,
+				9639BA611DC64E17000FC95B /* RandomizerTest.swift */,
+				9636DD321DC6683100323BB8 /* ActivatableTest.swift */,
+				96229B9C1DC67D2100203457 /* CommandableTest.swift */,
+				96229BA01DC6802100203457 /* RandomAITest.swift */,
+				96229BB31DC691D900203457 /* ShieldedTest.swift */,
 			);
 			name = UnitTests;
 			sourceTree = "<group>";
@@ -334,7 +462,7 @@
 		9639BA461DC63956000FC95B /* Amalgams */ = {
 			isa = PBXGroup;
 			children = (
-				5A6C01661DBECEE500E845ED /* Creature.swift */,
+				9639BA581DC64823000FC95B /* Organic.swift */,
 			);
 			name = Amalgams;
 			sourceTree = "<group>";
@@ -478,28 +606,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9639BA331DC630B0000FC95B /* Warrior.swift in Sources */,
+				9636DD351DC66C7B00323BB8 /* Reloadable.swift in Sources */,
 				5AD96FA61DBEC145005D4AFF /* CostFactory.swift in Sources */,
 				5AD96F8F1DBEB1F3005D4AFF /* Action.swift in Sources */,
 				9639BA3D1DC634A6000FC95B /* Armable.swift in Sources */,
 				9639BA401DC63638000FC95B /* Useable.swift in Sources */,
 				969FF7B11DC62A9E00E44E06 /* WeaponFactory.swift in Sources */,
+				96229BAE1DC6916100203457 /* Shielded.swift in Sources */,
 				969FF7AB1DC62A2500E44E06 /* Item.swift in Sources */,
 				5ACC051F1DBE9DFB00B52D3D /* GameScene.swift in Sources */,
+				9639BA501DC6435A000FC95B /* Missable.swift in Sources */,
+				9639BA761DC661FA000FC95B /* Activatable.swift in Sources */,
+				9639BA6A1DC65E38000FC95B /* Grunt.swift in Sources */,
+				9636DD3C1DC6721F00323BB8 /* AmmoCost.swift in Sources */,
 				5ACC05211DBE9DFB00B52D3D /* GameViewController.swift in Sources */,
+				9639BA6D1DC6603A000FC95B /* Combat.swift in Sources */,
 				9639BA2B1DC62E44000FC95B /* Ability.swift in Sources */,
 				5AD96F931DBEB2E6005D4AFF /* ActionFactory.swift in Sources */,
+				96229BBB1DC6A71D00203457 /* Spartan.swift in Sources */,
 				969FF7A71DC6296600E44E06 /* Marine.swift in Sources */,
-				5A6C01671DBECEE500E845ED /* Creature.swift in Sources */,
+				96229BBE1DC6AE4000203457 /* Logger.swift in Sources */,
+				9639BA591DC64823000FC95B /* Organic.swift in Sources */,
+				5A6C01671DBECEE500E845ED /* Fightable.swift in Sources */,
+				9639BA701DC66088000FC95B /* Team.swift in Sources */,
 				5ACC05191DBE9DFB00B52D3D /* AppDelegate.swift in Sources */,
+				96229B9F1DC67FB000203457 /* RandomAI.swift in Sources */,
 				969FF7A91DC629E900E44E06 /* Inventory.swift in Sources */,
 				5AD96FAC1DBEC33E005D4AFF /* StaminaUser.swift in Sources */,
 				5ADE441A1DBFFA7600652629 /* DamageType.swift in Sources */,
 				5AD96F861DBEB163005D4AFF /* Sourceable.swift in Sources */,
+				96229BC11DC6C88D00203457 /* Accurate.swift in Sources */,
 				5AD96F881DBEB183005D4AFF /* Targetable.swift in Sources */,
+				96229B981DC67B5B00203457 /* Commandable.swift in Sources */,
+				96229BA81DC68BEB00203457 /* Nameable.swift in Sources */,
+				96229BC41DC6D5D300203457 /* Elite.swift in Sources */,
 				5AD96F911DBEB291005D4AFF /* Cost.swift in Sources */,
+				9639BA601DC64B32000FC95B /* Randomizer.swift in Sources */,
 				5AD96F811DBEB0BC005D4AFF /* Damageable.swift in Sources */,
+				96229BB11DC6918E00203457 /* MockShielded.swift in Sources */,
 				969FF7AF1DC62A4300E44E06 /* Weapon.swift in Sources */,
+				9639BA521DC64410000FC95B /* Attack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,42 +653,76 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96229B9B1DC67D1600203457 /* Commandable.swift in Sources */,
+				9636DD3A1DC66F2300323BB8 /* Reloadable.swift in Sources */,
 				969FF7AD1DC62A3200E44E06 /* Item.swift in Sources */,
+				96229BA41DC680AB00203457 /* RandomAI.swift in Sources */,
 				9639BA311DC62FAB000FC95B /* Ability.swift in Sources */,
+				9636DD371DC66D1100323BB8 /* ReloadableTest.swift in Sources */,
+				9636DD311DC6681D00323BB8 /* MockActivatable.swift in Sources */,
 				5AD96F971DBEB31C005D4AFF /* Cost.swift in Sources */,
 				9639BA2D1DC62E53000FC95B /* AbilityTest.swift in Sources */,
 				5AD96FAA1DBEC21D005D4AFF /* CostFactoryTest.swift in Sources */,
 				5AD96FB31DBEC654005D4AFF /* StaminaUserTest.swift in Sources */,
+				96229BAF1DC6916100203457 /* Shielded.swift in Sources */,
 				5AD96F991DBEB500005D4AFF /* ActionFactoryTest.swift in Sources */,
 				5ADE441B1DBFFA7600652629 /* DamageType.swift in Sources */,
+				9639BA541DC6442B000FC95B /* AttackTest.swift in Sources */,
+				9639BA741DC660CE000FC95B /* CombatTest.swift in Sources */,
+				9639BA711DC66088000FC95B /* Team.swift in Sources */,
 				5AD96FAD1DBEC33E005D4AFF /* StaminaUser.swift in Sources */,
+				9636DD331DC6683100323BB8 /* ActivatableTest.swift in Sources */,
+				9636DD391DC66F0F00323BB8 /* MockReloadable.swift in Sources */,
+				96229BA91DC68BEB00203457 /* Nameable.swift in Sources */,
 				9639BA261DC62B93000FC95B /* Weapon.swift in Sources */,
 				5AD96F8A1DBEB1A3005D4AFF /* Sourceable.swift in Sources */,
-				5A6C01681DBECF4900E845ED /* Creature.swift in Sources */,
+				9639BA661DC65BA4000FC95B /* Organic.swift in Sources */,
+				96229BB21DC6918E00203457 /* MockShielded.swift in Sources */,
+				9639BA6E1DC6603A000FC95B /* Combat.swift in Sources */,
+				96229BA11DC6802100203457 /* RandomAITest.swift in Sources */,
+				5A6C01681DBECF4900E845ED /* Fightable.swift in Sources */,
 				9639BA4A1DC63E90000FC95B /* MockItem.swift in Sources */,
 				5AD96FA21DBEB8AB005D4AFF /* MockDamageable.swift in Sources */,
-				9639BA341DC630B0000FC95B /* Warrior.swift in Sources */,
+				96229BBC1DC6A71D00203457 /* Spartan.swift in Sources */,
+				9639BA341DC630B0000FC95B /* MockStaminaUnit.swift in Sources */,
 				9639BA241DC62B73000FC95B /* WeaponFactoryTest.swift in Sources */,
-				9639BA301DC62F18000FC95B /* MockCreature.swift in Sources */,
+				9639BA301DC62F18000FC95B /* MockFightable.swift in Sources */,
 				9639BA2E1DC62E89000FC95B /* Marine.swift in Sources */,
 				9639BA3B1DC6349D000FC95B /* MockArmable.swift in Sources */,
+				96229B9A1DC67CDD00203457 /* MockCommandable.swift in Sources */,
+				9636DD3D1DC6721F00323BB8 /* AmmoCost.swift in Sources */,
 				9639BA4C1DC63EB2000FC95B /* MockUseable.swift in Sources */,
 				5AD96FB61DBEC6A5005D4AFF /* MockStaminaUser.swift in Sources */,
-				9639BA4E1DC64032000FC95B /* WeaponCombatTest.swift in Sources */,
+				9639BA561DC644EF000FC95B /* MockAttack.swift in Sources */,
+				96229BC21DC6C88D00203457 /* Accurate.swift in Sources */,
 				9639BA431DC63825000FC95B /* MockAction.swift in Sources */,
+				96229BC51DC6D5D300203457 /* Elite.swift in Sources */,
 				969FF7AC1DC62A3000E44E06 /* Inventory.swift in Sources */,
+				96229BA31DC6809800203457 /* MockRandomAI.swift in Sources */,
+				9639BA651DC65948000FC95B /* MockMissableUnit.swift in Sources */,
+				9639BA571DC64501000FC95B /* Attack.swift in Sources */,
+				9639BA621DC64E17000FC95B /* RandomizerTest.swift in Sources */,
 				9639BA381DC632E5000FC95B /* ArmableTest.swift in Sources */,
 				5AD96FA71DBEC145005D4AFF /* CostFactory.swift in Sources */,
+				9639BA6B1DC65FC0000FC95B /* Grunt.swift in Sources */,
 				9639BA481DC63DF3000FC95B /* InventoryTest.swift in Sources */,
-				5A6C015F1DBEC8F900E845ED /* StaminaCombatTest.swift in Sources */,
+				9639BA5B1DC648EC000FC95B /* MockMissable.swift in Sources */,
 				9639BA251DC62B8E000FC95B /* WeaponFactory.swift in Sources */,
 				9639BA411DC63638000FC95B /* Useable.swift in Sources */,
+				9639BA771DC661FA000FC95B /* Activatable.swift in Sources */,
 				5AD96F891DBEB1A1005D4AFF /* Targetable.swift in Sources */,
 				5AD96F961DBEB319005D4AFF /* Action.swift in Sources */,
 				5AD96F8B1DBEB1A5005D4AFF /* Damageable.swift in Sources */,
+				9639BA631DC64E48000FC95B /* Randomizer.swift in Sources */,
+				96229BBF1DC6AE4000203457 /* Logger.swift in Sources */,
 				5AD96F941DBEB2E6005D4AFF /* ActionFactory.swift in Sources */,
 				9639BA3E1DC634A6000FC95B /* Armable.swift in Sources */,
+				9639BA5C1DC648F9000FC95B /* Missable.swift in Sources */,
+				96229BB51DC691D900203457 /* ShieldedTest.swift in Sources */,
+				96229BA61DC6830900203457 /* BasicCombatSim.swift in Sources */,
+				96229B9D1DC67D2100203457 /* CommandableTest.swift in Sources */,
 				5AD96F9F1DBEB6EA005D4AFF /* DamageableTest.swift in Sources */,
+				9639BA5E1DC64A19000FC95B /* MissableTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

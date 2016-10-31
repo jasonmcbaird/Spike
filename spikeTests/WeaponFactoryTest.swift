@@ -21,7 +21,7 @@ class WeaponFactoryTest: XCTestCase {
     func testAssaultRifle() {
         let weapon = factory.createWeapon(name: "Assault Rifle")
         
-        XCTAssert(weapon.actions[0] is Attack)
+        XCTAssert(weapon.abilities[0].actions[0] is Attack)
     }
     
 }

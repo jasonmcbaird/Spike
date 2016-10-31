@@ -1,5 +1,5 @@
 //
-//  Marine.swift
+//  Grunt.swift
 //  spike
 //
 //  Created by Jason Baird on 10/30/16.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-class Marine: Organic, Armable, RandomAI, Nameable {
+class Grunt: Organic, Armable, RandomAI, Nameable {
     
     var name: String
-    var maxHealth: Int = 10
-    var missChance: Int = 20
+    var maxHealth: Int = 8
+    var missChance: Int = 30
     let inventory: Inventory = Inventory()
     
     var health: Int
@@ -20,7 +20,7 @@ class Marine: Organic, Armable, RandomAI, Nameable {
     var targets: [Targetable] = []
     var activationClosures: [String: () -> ()] = [:]
     
-    init(name: String = "Johnson") {
+    init(name: String = "Yayap") {
         self.name = name
         self.health = maxHealth
     }

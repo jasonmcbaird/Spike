@@ -41,7 +41,7 @@ class Source: Sourceable, StaminaUser {
         executionCount += 1
     }
     
-    func getActions() -> [Action] {
+    func getAbilities() -> [Ability] {
         return []
     }
 }

@@ -13,9 +13,19 @@ class Ability {
     var actions: [Action] = []
     var costs: [Cost] = []
     
-    init(costs: [Cost], actions: [Action]) {
+    init(costs: [Cost] = [], actions: [Action] = []) {
         self.costs = costs
         self.actions = actions
+    }
+    
+    init(cost: Cost, action: Action) {
+        costs = [cost]
+        actions = [action]
+    }
+    
+    init(action: Action) {
+        costs = []
+        actions = [action]
     }
     
     func execute(source: Sourceable, targets: [Targetable]) {
@@ -31,5 +41,4 @@ class Ability {
             action.execute(source: source, targets: targets)
         }
     }
-    
 }

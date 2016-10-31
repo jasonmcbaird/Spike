@@ -10,55 +10,41 @@ import Foundation
 import GameplayKit
 
 class ActionFactory {
-    
-    func createAction(name: String, amount: Int) -> Action {
-        return StaticAttack(amount: amount)
+        
+    static func createAction(name: String, amount: Int) -> Action {
+        return BasicAttack(min: amount, max: amount)
     }
     
-    func createAction(name: String, amount: Int, nextAmount: Int) -> Action {
-        return Attack(min: amount, max: nextAmount)
+    static func createAction(name: String, amount: Int, nextAmount: Int) -> Action {
+        return BasicAttack(min: amount, max: nextAmount)
     }
-    
 }
 
-class StaticAttack: Action {
-    
-    private let amount: Int
-    
-    init(amount: Int) {
-        self.amount = amount
-    }
-    
-    func execute(source: Sourceable, targets: [Targetable]) {
-        for target in targets {
-            (target as? Damageable)?.takeDamage(amount: amount, type: DamageType.physical)
-        }
-    }
-    
-}
-
-class Attack: Action {
-    
-    private let min: Int
-    private let max: Int
-    private var random: GKRandomDistribution?
+class BasicAttack: Attack {
+    let min: Int
+    let max: Int
     
     init(min: Int, max: Int) {
         self.min = min
         self.max = max
     }
     
-    func getRandom() -> GKRandomDistribution {
-        if(random == nil) {
-            random = GKRandomDistribution.init(lowestValue: min, highestValue: max)
-        }
-        return random!
-    }
-    
     func execute(source: Sourceable, targets: [Targetable]) {
         for target in targets {
-            (target as? Damageable)?.takeDamage(amount: getRandom().nextInt(), type: DamageType.physical)
+            if((target as? Missable)?.checkHit(mod: ((source as? Accurate)?.accuracy) ?? 0) ?? true) {
+                let amount = Randomizer.rollRange(min, max)
+                (target as? Damageable)?.takeDamage(amount: amount)
+                
+                
+                if(target is Damageable) {
+                    Logger.log("\((source as! Nameable).name) deals \(amount) to \((target as! Nameable).name)!")
+                    if((target as! Damageable).health == 0) {
+                        Logger.log("\((target as! Nameable).name) is dead!")
+                    }
+                }
+            } else {
+                Logger.log("\((source as! Nameable).name) misses \((target as! Nameable).name)")
+            }
         }
     }
-    
 }

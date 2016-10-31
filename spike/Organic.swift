@@ -1,5 +1,5 @@
 //
-//  Useable.swift
+//  Creature.swift
 //  spike
 //
 //  Created by Jason Baird on 10/30/16.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-protocol Useable: Item {
-    
-    var abilities: [Ability] { get }
+protocol Organic: Fightable, Missable {
     
 }

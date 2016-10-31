@@ -14,11 +14,11 @@ class ArmableTest: XCTestCase {
     func testGetActions() {
         let armable = MockArmable()
         
-        let creature = MockCreature()
+        let unit = MockFightable()
         
-        armable.getActions()[0].execute(source: creature, targets: [creature])
+        armable.getAbilities()[0].execute(source: unit, targets: [unit])
         
-        XCTAssertEqual((armable.inventory.getActions()[0] as! MockAction).executeCount, 1)
+        XCTAssertEqual((armable.inventory.getAbilities()[0].actions[0] as! MockAction).executeCount, 1)
     }
     
 }

@@ -12,10 +12,10 @@ class Inventory {
     
     var items: [Item] = []
     
-    func getActions() -> [Action] {
-        var result: [Action] = []
+    func getAbilities() -> [Ability] {
+        var result: [Ability] = []
         for item in items {
-            result.append(contentsOf: (item as? Useable)?.actions ?? [])
+            result.append(contentsOf: (item as? Useable)?.abilities ?? [])
         }
         return result
     }

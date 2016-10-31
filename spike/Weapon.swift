@@ -13,5 +13,6 @@ protocol Weapon: Useable {
     var range: Int { get }
     var minDamage: Int { get }
     var maxDamage: Int { get }
+    var attackAbilities: [Ability] { get }
     
 }

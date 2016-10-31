@@ -1,5 +1,5 @@
 //
-//  Useable.swift
+//  MockAttack.swift
 //  spike
 //
 //  Created by Jason Baird on 10/30/16.
@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import GameplayKit
 
-protocol Useable: Item {
+class MockAttack: Attack {
     
-    var abilities: [Ability] { get }
+    var min = 3
+    var max = 4
     
 }

@@ -1,5 +1,5 @@
 //
-//  Useable.swift
+//  Nameable.swift
 //  spike
 //
 //  Created by Jason Baird on 10/30/16.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol Useable: Item {
+protocol Nameable {
     
-    var abilities: [Ability] { get }
+    var name: String { get }
     
 }

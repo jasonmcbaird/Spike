@@ -16,10 +16,10 @@ class MockArmable: Armable {
 
 class MockInventory: Inventory {
     
-    private let action = MockAction()
+    private let ability = Ability(action: MockAction())
     
-    override func getActions() -> [Action] {
-        return [action]
+    override func getAbilities() -> [Ability] {
+        return [ability]
     }
     
 }

@@ -16,16 +16,16 @@ class AbilityTest: XCTestCase {
         let action = MockAction()
         let ability = Ability(costs: [cost], actions: [action])
         
-        let creature = MockCreature()
+        let unit = MockFightable()
         
-        ability.execute(source: creature, targets: [creature])
+        ability.execute(source: unit, targets: [unit])
         
         XCTAssertEqual(cost.payCount, 1)
         XCTAssertEqual(action.executeCount, 1)
         
         cost.canPay = false
         
-        ability.execute(source: creature, targets: [creature])
+        ability.execute(source: unit, targets: [unit])
         
         XCTAssertEqual(cost.payCount, 1)
         XCTAssertEqual(action.executeCount, 1)

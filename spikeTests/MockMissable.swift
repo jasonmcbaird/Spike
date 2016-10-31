@@ -1,5 +1,5 @@
 //
-//  Useable.swift
+//  MockMissable.swift
 //  spike
 //
 //  Created by Jason Baird on 10/30/16.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol Useable: Item {
+class MockMissable: Missable {
     
-    var abilities: [Ability] { get }
+    var missChance: Int = 20
     
 }

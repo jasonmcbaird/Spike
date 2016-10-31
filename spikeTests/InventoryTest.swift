@@ -14,12 +14,12 @@ class InventoryTest: XCTestCase {
     func testGetActions() {
         let inventory = Inventory()
         let useable = MockUseable()
-        let creature = MockCreature()
+        let unit = MockFightable()
         
         inventory.items.append(MockItem())
         inventory.items.append(useable)
-        inventory.getActions()[0].execute(source: creature, targets: [creature])
+        inventory.getAbilities()[0].execute(source: unit, targets: [unit])
         
-        XCTAssertEqual((useable.actions[0] as! MockAction).executeCount, 1)
+        XCTAssertEqual((useable.abilities[0].actions[0] as! MockAction).executeCount, 1)
     }
 }

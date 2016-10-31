@@ -10,10 +10,10 @@ import Foundation
 
 class MockUseable: Useable {
     
-    var actions: [Action]
+    var abilities: [Ability]
     
     init() {
-        actions = [MockAction()]
+        abilities = [Ability(action: MockAction())]
     }
     
 }

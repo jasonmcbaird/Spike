@@ -1,5 +1,5 @@
 //
-//  Marine.swift
+//  Spartan.swift
 //  spike
 //
 //  Created by Jason Baird on 10/30/16.
@@ -8,21 +8,27 @@
 
 import Foundation
 
-class Marine: Organic, Armable, RandomAI, Nameable {
+class Spartan: Organic, Armable, RandomAI, Shielded, Nameable, Accurate {
     
     var name: String
-    var maxHealth: Int = 10
-    var missChance: Int = 20
+    var maxHealth: Int = 20
+    var missChance: Int = 40
+    var maxShield: Int = 15
+    var shieldRechargeDelay: Int = 2
     let inventory: Inventory = Inventory()
+    var accuracy = 25
     
     var health: Int
+    var shield: Int
     var activated = false
     var targets: [Targetable] = []
     var activationClosures: [String: () -> ()] = [:]
+    var shieldRechargeCounter: Int = 0
     
-    init(name: String = "Johnson") {
+    required init(name: String = "John") {
         self.name = name
         self.health = maxHealth
+        self.shield = maxShield
     }
     
 }

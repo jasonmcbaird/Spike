@@ -10,29 +10,15 @@ import XCTest
 
 class ActionFactoryTest: XCTestCase {
     
-    var factory: ActionFactory!
-    
-    override func setUp() {
-        super.setUp()
-        factory = ActionFactory()
-    }
-    
-    func testAttack() {
-        let action = factory.createAction(name: "Static Attack", amount: 3)
-        let creature = MockCreature()
-        action.execute(source: creature, targets: [creature])
-        XCTAssertEqual(creature.damage, 3)
-    }
-    
     func testVariableAttack() {
-        let action = factory.createAction(name: "Attack", amount: 3, nextAmount: 4)
-        let sourceAndTarget = MockCreature()
+        let action = ActionFactory.createAction(name: "Attack", amount: 3, nextAmount: 4)
+        let unit = MockFightable()
         
         for _ in 1...100 {
-            action.execute(source: sourceAndTarget, targets: [sourceAndTarget])
+            action.execute(source: unit, targets: [unit])
         }
-        XCTAssertLessThan(sourceAndTarget.damage, 400)
-        XCTAssertGreaterThan(sourceAndTarget.damage, 300)
+        XCTAssertLessThan(unit.damage, 400)
+        XCTAssertGreaterThan(unit.damage, 300)
     }
     
 }

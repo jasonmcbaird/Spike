@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol Creature: Damageable, Targetable, Sourceable {
+protocol Fightable: Damageable, Targetable, Sourceable {
     
 }
