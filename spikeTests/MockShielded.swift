@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MockShielded: Shielded {
+class MockShielded: Shielded, Nameable {
     
     var maxShield = 10
     var shield = 10
@@ -18,5 +18,7 @@ class MockShielded: Shielded {
     var activated = false
     
     var health = 5
+    
+    var name = "Shielded"
     
 }
