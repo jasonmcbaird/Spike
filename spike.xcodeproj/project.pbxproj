@@ -66,6 +66,11 @@
 		96229BC21DC6C88D00203457 /* Accurate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BC01DC6C88D00203457 /* Accurate.swift */; };
 		96229BC41DC6D5D300203457 /* Elite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BC31DC6D5D300203457 /* Elite.swift */; };
 		96229BC51DC6D5D300203457 /* Elite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BC31DC6D5D300203457 /* Elite.swift */; };
+		96229BC71DC6E95A00203457 /* Armored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BC61DC6E95A00203457 /* Armored.swift */; };
+		96229BC81DC6E95A00203457 /* Armored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BC61DC6E95A00203457 /* Armored.swift */; };
+		96229BCA1DC6ECF200203457 /* MockArmored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BC91DC6ECF200203457 /* MockArmored.swift */; };
+		96229BCB1DC6ECF200203457 /* MockArmored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BC91DC6ECF200203457 /* MockArmored.swift */; };
+		96229BCD1DC6ED8200203457 /* ArmoredTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96229BCC1DC6ED8200203457 /* ArmoredTest.swift */; };
 		9636DD311DC6681D00323BB8 /* MockActivatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636DD301DC6681D00323BB8 /* MockActivatable.swift */; };
 		9636DD331DC6683100323BB8 /* ActivatableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636DD321DC6683100323BB8 /* ActivatableTest.swift */; };
 		9636DD351DC66C7B00323BB8 /* Reloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636DD341DC66C7B00323BB8 /* Reloadable.swift */; };
@@ -189,6 +194,9 @@
 		96229BBD1DC6AE4000203457 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		96229BC01DC6C88D00203457 /* Accurate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accurate.swift; sourceTree = "<group>"; };
 		96229BC31DC6D5D300203457 /* Elite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elite.swift; sourceTree = "<group>"; };
+		96229BC61DC6E95A00203457 /* Armored.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Armored.swift; sourceTree = "<group>"; };
+		96229BC91DC6ECF200203457 /* MockArmored.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockArmored.swift; sourceTree = "<group>"; };
+		96229BCC1DC6ED8200203457 /* ArmoredTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArmoredTest.swift; sourceTree = "<group>"; };
 		9636DD301DC6681D00323BB8 /* MockActivatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockActivatable.swift; sourceTree = "<group>"; };
 		9636DD321DC6683100323BB8 /* ActivatableTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivatableTest.swift; sourceTree = "<group>"; };
 		9636DD341DC66C7B00323BB8 /* Reloadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reloadable.swift; sourceTree = "<group>"; };
@@ -374,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				96229BAD1DC6916100203457 /* Shielded.swift */,
+				96229BC61DC6E95A00203457 /* Armored.swift */,
 				5AD96F801DBEB0BC005D4AFF /* Damageable.swift */,
 				5AD96FAB1DBEC33E005D4AFF /* StaminaUser.swift */,
 				9639BA3C1DC634A6000FC95B /* Armable.swift */,
@@ -391,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				9639BA321DC630B0000FC95B /* MockStaminaUnit.swift */,
+				96229BC91DC6ECF200203457 /* MockArmored.swift */,
 				96229BB01DC6918E00203457 /* MockShielded.swift */,
 				9636DD381DC66F0F00323BB8 /* MockReloadable.swift */,
 				5AD96FA01DBEB8AB005D4AFF /* MockDamageable.swift */,
@@ -439,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				5AD96F981DBEB500005D4AFF /* ActionFactoryTest.swift */,
+				96229BCC1DC6ED8200203457 /* ArmoredTest.swift */,
 				9636DD361DC66D1100323BB8 /* ReloadableTest.swift */,
 				9639BA721DC660CE000FC95B /* CombatTest.swift */,
 				9639BA231DC62B73000FC95B /* WeaponFactoryTest.swift */,
@@ -608,9 +619,11 @@
 			files = (
 				9636DD351DC66C7B00323BB8 /* Reloadable.swift in Sources */,
 				5AD96FA61DBEC145005D4AFF /* CostFactory.swift in Sources */,
+				96229BCA1DC6ECF200203457 /* MockArmored.swift in Sources */,
 				5AD96F8F1DBEB1F3005D4AFF /* Action.swift in Sources */,
 				9639BA3D1DC634A6000FC95B /* Armable.swift in Sources */,
 				9639BA401DC63638000FC95B /* Useable.swift in Sources */,
+				96229BC71DC6E95A00203457 /* Armored.swift in Sources */,
 				969FF7B11DC62A9E00E44E06 /* WeaponFactory.swift in Sources */,
 				96229BAE1DC6916100203457 /* Shielded.swift in Sources */,
 				969FF7AB1DC62A2500E44E06 /* Item.swift in Sources */,
@@ -657,6 +670,7 @@
 				9636DD3A1DC66F2300323BB8 /* Reloadable.swift in Sources */,
 				969FF7AD1DC62A3200E44E06 /* Item.swift in Sources */,
 				96229BA41DC680AB00203457 /* RandomAI.swift in Sources */,
+				96229BC81DC6E95A00203457 /* Armored.swift in Sources */,
 				9639BA311DC62FAB000FC95B /* Ability.swift in Sources */,
 				9636DD371DC66D1100323BB8 /* ReloadableTest.swift in Sources */,
 				9636DD311DC6681D00323BB8 /* MockActivatable.swift in Sources */,
@@ -667,6 +681,7 @@
 				96229BAF1DC6916100203457 /* Shielded.swift in Sources */,
 				5AD96F991DBEB500005D4AFF /* ActionFactoryTest.swift in Sources */,
 				5ADE441B1DBFFA7600652629 /* DamageType.swift in Sources */,
+				96229BCD1DC6ED8200203457 /* ArmoredTest.swift in Sources */,
 				9639BA541DC6442B000FC95B /* AttackTest.swift in Sources */,
 				9639BA741DC660CE000FC95B /* CombatTest.swift in Sources */,
 				9639BA711DC66088000FC95B /* Team.swift in Sources */,
@@ -684,6 +699,7 @@
 				9639BA4A1DC63E90000FC95B /* MockItem.swift in Sources */,
 				5AD96FA21DBEB8AB005D4AFF /* MockDamageable.swift in Sources */,
 				96229BBC1DC6A71D00203457 /* Spartan.swift in Sources */,
+				96229BCB1DC6ECF200203457 /* MockArmored.swift in Sources */,
 				9639BA341DC630B0000FC95B /* MockStaminaUnit.swift in Sources */,
 				9639BA241DC62B73000FC95B /* WeaponFactoryTest.swift in Sources */,
 				9639BA301DC62F18000FC95B /* MockFightable.swift in Sources */,

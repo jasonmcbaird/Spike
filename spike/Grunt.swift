@@ -19,6 +19,7 @@ class Grunt: Organic, Armable, RandomAI, Nameable {
     var activated = false
     var targets: [Targetable] = []
     var activationClosures: [String: () -> ()] = [:]
+    var damageClosures: [String : (Int, DamageType) -> (Int)] = [:]
     
     init(name: String = "Yayap") {
         self.name = name

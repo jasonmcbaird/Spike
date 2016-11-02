@@ -87,12 +87,11 @@ class BasicCombatSim: XCTestCase {
         
         let bam = Grunt(name: "Bam")
         let sip = Grunt(name: "Sip")
-        let babad = Grunt(name: "Babad")
         
         let voroNar = Elite(name: "Voro Nar")
         
         humans = Team(activatables: [chief])
-        covenant = Team(activatables: [bam, sip, babad, voroNar])
+        covenant = Team(activatables: [bam, sip, voroNar])
         
         combat = Combat(teams: [humans, covenant])
         equip()

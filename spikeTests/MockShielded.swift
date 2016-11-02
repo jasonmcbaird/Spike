@@ -15,6 +15,7 @@ class MockShielded: Shielded, Nameable {
     var shieldRechargeDelay = 2
     var shieldRechargeCounter = 2
     var activationClosures: [String: () -> ()] = [:]
+    var damageClosures: [String : (Int, DamageType) -> (Int)] = [:]
     var activated = false
     
     var health = 5

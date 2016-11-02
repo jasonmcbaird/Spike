@@ -20,6 +20,7 @@ class MockMissableFightable: Fightable, Missable {
     var damage = 0
     var missChance: Int = 20
     var missCount = 0
+    var damageClosures: [String : (Int, DamageType) -> (Int)] = [:]
     
     func getAbilities() -> [Ability] {
         return []

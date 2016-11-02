@@ -63,7 +63,7 @@ class PlasmaPistol: Weapon {
     var attackAbilities: [Ability]
     
     init() {
-        attackAbilities = [Ability(costs: [], actions: [ActionFactory.createAction(name: "Attack", amount: minDamage, nextAmount: maxDamage)])]
+        attackAbilities = [Ability(costs: [], actions: [ActionFactory.createAction(name: "PlasmaAttack", amount: minDamage, nextAmount: maxDamage)])]
     }
     
     var abilities: [Ability] {
@@ -81,7 +81,7 @@ class PlasmaRifle: Weapon {
     var attackAbilities: [Ability]
     
     init() {
-        attackAbilities = [Ability(costs: [], actions: [ActionFactory.createAction(name: "Attack", amount: minDamage, nextAmount: maxDamage)])]
+        attackAbilities = [Ability(costs: [], actions: [ActionFactory.createAction(name: "PlasmaAttack", amount: minDamage, nextAmount: maxDamage)])]
     }
     
     var abilities: [Ability] {

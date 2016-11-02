@@ -11,6 +11,7 @@ import Foundation
 class MockFightable: Fightable, Nameable {
     
     var name = "Jim"
+    var damageClosures: [String : (Int, DamageType) -> (Int)] = [:]
     
     var health: Int {
         get {

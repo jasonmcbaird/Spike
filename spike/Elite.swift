@@ -24,6 +24,7 @@ class Elite: Organic, Armable, RandomAI, Shielded, Nameable, Accurate {
     var targets: [Targetable] = []
     var activationClosures: [String: () -> ()] = [:]
     var shieldRechargeCounter: Int = 0
+    var damageClosures: [String : (Int, DamageType) -> (Int)] = [:]
     
     required init(name: String = "Voro Nar") {
         self.name = name

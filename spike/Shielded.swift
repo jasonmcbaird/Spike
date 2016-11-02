@@ -13,11 +13,13 @@ protocol Shielded: Damageable, Activatable {
     var maxShield: Int { get }
     var shield: Int { get set }
     var shieldRechargeDelay: Int { get }
-    var shieldRechargeCounter: Int { get set } // Init as -1
+    var shieldRechargeCounter: Int { get set }
     
 }
 
 extension Shielded {
+    
+    // TODO: Need to call appendClosures() before you take damage
     
     func rechargeShield() {
         shield += (maxShield / 2)
@@ -26,21 +28,35 @@ extension Shielded {
         }
     }
     
-    func takeDamage(amount: Int, type: DamageType) {
-        appendShieldClosure()
-        shield -= amount
-        shieldRechargeCounter = shieldRechargeDelay
-        if(shield < 0) {
-            health += shield
-            shield = 0
-            if(health <= 0) {
-                health = 0
-                self.activated = true
-            }
+    private func appendClosures() {
+        appendShieldDamageClosure()
+        appendShieldRechargeClosure()
+    }
+    
+    private func appendShieldDamageClosure() {
+        if(damageClosures["Shield"] == nil) {
+            damageClosures.updateValue({amount, type in
+                var result = amount
+                if(type == DamageType.plasma) {
+                    result = result * 2
+                }
+                self.shield -= result
+                self.shieldRechargeCounter = self.shieldRechargeDelay
+                if(self.shield < 0) {
+                    result = -self.shield
+                    self.shield = 0
+                    if(type == DamageType.plasma) {
+                        result = result / 2
+                    }
+                    return result
+                } else {
+                    return 0
+                }
+            }, forKey: "Shield")
         }
     }
     
-    private func appendShieldClosure() {
+    private func appendShieldRechargeClosure() {
         if(activationClosures["Shield"] == nil) {
             activationClosures.updateValue({
                 if(self.shieldRechargeCounter == 0) {

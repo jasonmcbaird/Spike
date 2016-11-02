@@ -54,4 +54,16 @@ class ShieldedTest: XCTestCase {
         XCTAssertEqual(shielded.shield, 10)
     }
     
+    func testPlasma() {
+        
+        let shielded = MockShielded()
+        
+        shielded.takeDamage(amount: 1)
+        
+        shielded.takeDamage(amount: 6, type: DamageType.plasma)
+        
+        XCTAssertEqual(shielded.shield, 0)
+        XCTAssertEqual(shielded.health, 4)
+    }
+    
 }

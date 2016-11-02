@@ -13,6 +13,7 @@ protocol Damageable: class {
     func takeDamage(amount: Int, type: DamageType)
     
     var health: Int { get set }
+    var damageClosures: [String: (Int, DamageType) -> (Int)] { get set }
     
 }
 
@@ -23,7 +24,11 @@ extension Damageable {
     }
     
     func takeDamage(amount: Int, type: DamageType) {
-        health -= amount
+        var result = amount
+        for closure in damageClosures.values {
+            result = closure(result, type)
+        }
+        health -= result
         if(health <= 0) {
             health = 0
             (self as? Activatable)?.activated = true

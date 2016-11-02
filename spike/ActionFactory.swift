@@ -12,17 +12,26 @@ import GameplayKit
 class ActionFactory {
         
     static func createAction(name: String, amount: Int) -> Action {
-        return BasicAttack(min: amount, max: amount)
+        let result = BasicAttack(min: amount, max: amount)
+        if(name == "PlasmaAttack") {
+            result.type = DamageType.plasma
+        }
+        return result
     }
     
     static func createAction(name: String, amount: Int, nextAmount: Int) -> Action {
-        return BasicAttack(min: amount, max: nextAmount)
+        let result = BasicAttack(min: amount, max: nextAmount)
+        if(name == "PlasmaAttack") {
+            result.type = DamageType.plasma
+        }
+        return result
     }
 }
 
 class BasicAttack: Attack {
     let min: Int
     let max: Int
+    var type: DamageType = DamageType.physical
     
     init(min: Int, max: Int) {
         self.min = min
@@ -33,7 +42,7 @@ class BasicAttack: Attack {
         for target in targets {
             if((target as? Missable)?.checkHit(mod: ((source as? Accurate)?.accuracy) ?? 0) ?? true) {
                 let amount = Randomizer.rollRange(min, max)
-                (target as? Damageable)?.takeDamage(amount: amount)
+                (target as? Damageable)?.takeDamage(amount: amount, type: type)
                 
                 
                 if(target is Damageable) {

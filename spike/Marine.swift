@@ -19,6 +19,7 @@ class Marine: Organic, Armable, RandomAI, Nameable {
     var activated = false
     var targets: [Targetable] = []
     var activationClosures: [String: () -> ()] = [:]
+    var damageClosures: [String : (Int, DamageType) -> (Int)] = [:]
     
     init(name: String = "Johnson") {
         self.name = name

@@ -22,8 +22,9 @@ class Spartan: Organic, Armable, RandomAI, Shielded, Nameable, Accurate {
     var shield: Int
     var activated = false
     var targets: [Targetable] = []
-    var activationClosures: [String: () -> ()] = [:]
     var shieldRechargeCounter: Int = 0
+    var activationClosures: [String: () -> ()] = [:]
+    var damageClosures: [String : (Int, DamageType) -> (Int)] = [:]
     
     required init(name: String = "John") {
         self.name = name

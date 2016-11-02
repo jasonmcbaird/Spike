@@ -13,6 +13,7 @@ class MockStaminaFightable: Fightable, StaminaUser {
     var maxHealth: Int
     var health: Int
     var stamina: Int
+    var damageClosures: [String : (Int, DamageType) -> (Int)] = [:]
     
     init(maxHealth: Int, stamina: Int) {
         self.maxHealth = maxHealth
