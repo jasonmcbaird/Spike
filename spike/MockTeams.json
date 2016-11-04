@@ -1,0 +1,58 @@
+{
+	"North Forge": {
+			"John": {
+				"type": "Spartan",
+				"weapon": "Shotgun"
+			},
+			"Jason": {
+				"type": "Marine",
+				"weapon": "Assault Rifle"
+			},
+			"Cody": {
+				"type": "Marine",
+				"weapon": "Assault Rifle"
+			},
+			"Cheyenne": {
+				"type": "Marine",
+				"weapon": "Assault Rifle"
+			},
+			"Kevin": {
+				"type": "Marine",
+				"weapon": "Assault Rifle"
+			},
+			"Tux": {
+				"type": "Marine",
+				"weapon": "Assault Rifle"
+			}
+		},
+	"Violet Squad": {
+		"Voro Nar": {
+			"type": "Elite",
+			"weapon": "Plasma Rifle"
+		},
+		"Thel 'Vadam": {
+			"type": "Elite",
+			"weapon": "Plasma Rifle"
+		},
+		"Yayap": {
+			"type": "Grunt",
+			"weapon": "Plasma Pistol"
+		},
+		"Dadab": {
+			"type": "Grunt",
+			"weapon": "Plasma Pistol"
+		},
+		"Flim": {
+			"type": "Grunt",
+			"weapon": "Plasma Pistol"
+		},
+		"Bam": {
+			"type": "Grunt",
+			"weapon": "Plasma Pistol"
+		},
+		"Sip": {
+			"type": "Grunt",
+			"weapon": "Plasma Pistol"
+		}
+	}
+}

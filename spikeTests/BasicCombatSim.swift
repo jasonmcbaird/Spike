@@ -27,10 +27,10 @@ class BasicCombatSim: XCTestCase {
             Logger.log("========New fight========")
             setupNewCombat()
             combat.startCombat()
-            if(combat.teams[0].isAlive()) {
+            if(combat.teams[0].isActive()) {
                 humanVictories += 1
             }
-            if(combat.teams[1].isAlive()) {
+            if(combat.teams[1].isActive()) {
                 covieVictories += 1
             }
         }
@@ -50,10 +50,10 @@ class BasicCombatSim: XCTestCase {
             Logger.log("========New fight========")
             setupNewSpartanCombat()
             combat.startCombat()
-            if(combat.teams[0].isAlive()) {
+            if(combat.teams[0].isActive()) {
                 humanVictories += 1
             }
-            if(combat.teams[1].isAlive()) {
+            if(combat.teams[1].isActive()) {
                 covieVictories += 1
             }
         }
@@ -85,13 +85,15 @@ class BasicCombatSim: XCTestCase {
     func setupNewSpartanCombat() {
         let chief = Spartan(name: "John")
         
+        let dadab = Grunt(name: "Dadab")
+        let flim = Grunt(name: "Flim")
         let bam = Grunt(name: "Bam")
         let sip = Grunt(name: "Sip")
         
         let voroNar = Elite(name: "Voro Nar")
         
         humans = Team(activatables: [chief])
-        covenant = Team(activatables: [bam, sip, voroNar])
+        covenant = Team(activatables: [dadab, flim, bam, sip, voroNar])
         
         combat = Combat(teams: [humans, covenant])
         equip()
@@ -100,35 +102,35 @@ class BasicCombatSim: XCTestCase {
     }
     
     func equip() {
-        for human in humans.activatables {
+        for human in humans {
             if(human is Spartan) {
-                (human as! Armable).inventory.items.append(WeaponFactory().createWeapon(name: "Sniper Rifle"))
+                (human as! Armable).inventory.append(WeaponFactory().createWeapon(name: "Sniper Rifle"))
             } else {
-                (human as! Armable).inventory.items.append(WeaponFactory().createWeapon(name: "Assault Rifle"))
+                (human as! Armable).inventory.append(WeaponFactory().createWeapon(name: "Assault Rifle"))
             }
         }
-        for alien in covenant.activatables {
+        for alien in covenant {
             if(alien is Elite) {
-                (alien as! Armable).inventory.items.append(WeaponFactory().createWeapon(name: "Plasma Rifle"))
+                (alien as! Armable).inventory.append(WeaponFactory().createWeapon(name: "Plasma Rifle"))
             } else {
-                (alien as! Armable).inventory.items.append(WeaponFactory().createWeapon(name: "Plasma Pistol"))
+                (alien as! Armable).inventory.append(WeaponFactory().createWeapon(name: "Plasma Pistol"))
             }
         }
     }
     
     func refreshTargets() {
-        for human in humans.activatables {
+        for human in humans {
             (human as! Commandable).targets = []
-            for target in covenant.activatables {
+            for target in covenant {
                 if((target as! Damageable).health > 0) {
                     (human as! Commandable).targets.append(target as! Targetable)
                 }
             }
         }
         
-        for alien in covenant.activatables {
+        for alien in covenant {
             (alien as! Commandable).targets = []
-            for target in humans.activatables {
+            for target in humans {
                 if((target as! Damageable).health > 0) {
                     (alien as! Commandable).targets.append(target as! Targetable)
                 }

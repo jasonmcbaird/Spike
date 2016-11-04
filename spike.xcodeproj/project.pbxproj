@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		5A6C01671DBECEE500E845ED /* Fightable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C01661DBECEE500E845ED /* Fightable.swift */; };
 		5A6C01681DBECF4900E845ED /* Fightable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C01661DBECEE500E845ED /* Fightable.swift */; };
+		5AA905071DCD247F00AB7A3B /* SpartanCombatScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA905061DCD247F00AB7A3B /* SpartanCombatScene.swift */; };
+		5AA905081DCD247F00AB7A3B /* SpartanCombatScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA905061DCD247F00AB7A3B /* SpartanCombatScene.swift */; };
+		5AA9050A1DCD24B900AB7A3B /* HealthBarBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA905091DCD24B900AB7A3B /* HealthBarBinding.swift */; };
+		5AA9050B1DCD24B900AB7A3B /* HealthBarBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA905091DCD24B900AB7A3B /* HealthBarBinding.swift */; };
+		5AA9050D1DCD294700AB7A3B /* UnitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9050C1DCD294700AB7A3B /* UnitFactory.swift */; };
+		5AA9050E1DCD294700AB7A3B /* UnitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9050C1DCD294700AB7A3B /* UnitFactory.swift */; };
+		5AA905111DCD295600AB7A3B /* UnitFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9050F1DCD295600AB7A3B /* UnitFactoryTest.swift */; };
+		5AA905141DCD374500AB7A3B /* TeamTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA905121DCD374400AB7A3B /* TeamTest.swift */; };
+		5AA9051A1DCD3DA900AB7A3B /* MockTeams.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AA905181DCD3DA900AB7A3B /* MockTeams.json */; };
+		5AA9051C1DCD3F5400AB7A3B /* TeamFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9051B1DCD3F5400AB7A3B /* TeamFactory.swift */; };
+		5AA9051D1DCD3F5400AB7A3B /* TeamFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9051B1DCD3F5400AB7A3B /* TeamFactory.swift */; };
+		5AA905201DCD3F5C00AB7A3B /* TeamFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9051E1DCD3F5C00AB7A3B /* TeamFactoryTest.swift */; };
+		5AA905271DCD486C00AB7A3B /* MockTeams.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AA905181DCD3DA900AB7A3B /* MockTeams.json */; };
 		5ACC05191DBE9DFB00B52D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC05181DBE9DFB00B52D3D /* AppDelegate.swift */; };
 		5ACC051B1DBE9DFB00B52D3D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5ACC051A1DBE9DFB00B52D3D /* GameScene.sks */; };
 		5ACC051D1DBE9DFB00B52D3D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5ACC051C1DBE9DFB00B52D3D /* Actions.sks */; };
@@ -149,6 +162,14 @@
 
 /* Begin PBXFileReference section */
 		5A6C01661DBECEE500E845ED /* Fightable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fightable.swift; sourceTree = "<group>"; };
+		5AA905061DCD247F00AB7A3B /* SpartanCombatScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpartanCombatScene.swift; sourceTree = "<group>"; };
+		5AA905091DCD24B900AB7A3B /* HealthBarBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthBarBinding.swift; sourceTree = "<group>"; };
+		5AA9050C1DCD294700AB7A3B /* UnitFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitFactory.swift; sourceTree = "<group>"; };
+		5AA9050F1DCD295600AB7A3B /* UnitFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitFactoryTest.swift; sourceTree = "<group>"; };
+		5AA905121DCD374400AB7A3B /* TeamTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTest.swift; sourceTree = "<group>"; };
+		5AA905181DCD3DA900AB7A3B /* MockTeams.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MockTeams.json; path = ../spike/MockTeams.json; sourceTree = "<group>"; };
+		5AA9051B1DCD3F5400AB7A3B /* TeamFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamFactory.swift; sourceTree = "<group>"; };
+		5AA9051E1DCD3F5C00AB7A3B /* TeamFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamFactoryTest.swift; sourceTree = "<group>"; };
 		5ACC05151DBE9DFB00B52D3D /* spike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACC05181DBE9DFB00B52D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ACC051A1DBE9DFB00B52D3D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -292,11 +313,13 @@
 				9639BA6C1DC6603A000FC95B /* Combat.swift */,
 				9639BA6F1DC66088000FC95B /* Team.swift */,
 				9636DD3B1DC6721F00323BB8 /* AmmoCost.swift */,
-				9639BA291DC62E2E000FC95B /* Build */,
+				5AA905061DCD247F00AB7A3B /* SpartanCombatScene.swift */,
+				5AA905091DCD24B900AB7A3B /* HealthBarBinding.swift */,
 				5AD96F951DBEB2F6005D4AFF /* Factories */,
 				5AD96F821DBEB0E1005D4AFF /* Enums */,
 				5ACC05761DBEAF1B00B52D3D /* Protocols */,
 				5ACC054F1DBE9EB000B52D3D /* Units */,
+				9639BA291DC62E2E000FC95B /* Build */,
 			);
 			path = spike;
 			sourceTree = "<group>";
@@ -374,6 +397,8 @@
 				5AD96F921DBEB2E6005D4AFF /* ActionFactory.swift */,
 				5AD96FA51DBEC145005D4AFF /* CostFactory.swift */,
 				969FF7B01DC62A9E00E44E06 /* WeaponFactory.swift */,
+				5AA9050C1DCD294700AB7A3B /* UnitFactory.swift */,
+				5AA9051B1DCD3F5400AB7A3B /* TeamFactory.swift */,
 			);
 			name = Factories;
 			sourceTree = "<group>";
@@ -416,6 +441,7 @@
 				9636DD301DC6681D00323BB8 /* MockActivatable.swift */,
 				96229B991DC67CDD00203457 /* MockCommandable.swift */,
 				96229BA21DC6809800203457 /* MockRandomAI.swift */,
+				5AA905181DCD3DA900AB7A3B /* MockTeams.json */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -452,6 +478,7 @@
 				96229BCC1DC6ED8200203457 /* ArmoredTest.swift */,
 				9636DD361DC66D1100323BB8 /* ReloadableTest.swift */,
 				9639BA721DC660CE000FC95B /* CombatTest.swift */,
+				5AA905121DCD374400AB7A3B /* TeamTest.swift */,
 				9639BA231DC62B73000FC95B /* WeaponFactoryTest.swift */,
 				5AD96FA81DBEC21D005D4AFF /* CostFactoryTest.swift */,
 				5AD96FB11DBEC654005D4AFF /* StaminaUserTest.swift */,
@@ -466,6 +493,8 @@
 				96229B9C1DC67D2100203457 /* CommandableTest.swift */,
 				96229BA01DC6802100203457 /* RandomAITest.swift */,
 				96229BB31DC691D900203457 /* ShieldedTest.swift */,
+				5AA9050F1DCD295600AB7A3B /* UnitFactoryTest.swift */,
+				5AA9051E1DCD3F5C00AB7A3B /* TeamFactoryTest.swift */,
 			);
 			name = UnitTests;
 			sourceTree = "<group>";
@@ -591,6 +620,7 @@
 				5ACC05241DBE9DFB00B52D3D /* Main.storyboard in Resources */,
 				5ACC051B1DBE9DFB00B52D3D /* GameScene.sks in Resources */,
 				5ACC05261DBE9DFB00B52D3D /* Assets.xcassets in Resources */,
+				5AA905271DCD486C00AB7A3B /* MockTeams.json in Resources */,
 				5ACC05291DBE9DFB00B52D3D /* LaunchScreen.storyboard in Resources */,
 				5ACC051D1DBE9DFB00B52D3D /* Actions.sks in Resources */,
 			);
@@ -600,6 +630,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA9051A1DCD3DA900AB7A3B /* MockTeams.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,12 +652,16 @@
 				5AD96FA61DBEC145005D4AFF /* CostFactory.swift in Sources */,
 				96229BCA1DC6ECF200203457 /* MockArmored.swift in Sources */,
 				5AD96F8F1DBEB1F3005D4AFF /* Action.swift in Sources */,
+				5AA9050D1DCD294700AB7A3B /* UnitFactory.swift in Sources */,
 				9639BA3D1DC634A6000FC95B /* Armable.swift in Sources */,
 				9639BA401DC63638000FC95B /* Useable.swift in Sources */,
+				5AA9051C1DCD3F5400AB7A3B /* TeamFactory.swift in Sources */,
 				96229BC71DC6E95A00203457 /* Armored.swift in Sources */,
 				969FF7B11DC62A9E00E44E06 /* WeaponFactory.swift in Sources */,
 				96229BAE1DC6916100203457 /* Shielded.swift in Sources */,
+				5AA905071DCD247F00AB7A3B /* SpartanCombatScene.swift in Sources */,
 				969FF7AB1DC62A2500E44E06 /* Item.swift in Sources */,
+				5AA9050A1DCD24B900AB7A3B /* HealthBarBinding.swift in Sources */,
 				5ACC051F1DBE9DFB00B52D3D /* GameScene.swift in Sources */,
 				9639BA501DC6435A000FC95B /* Missable.swift in Sources */,
 				9639BA761DC661FA000FC95B /* Activatable.swift in Sources */,
@@ -678,7 +713,11 @@
 				9639BA2D1DC62E53000FC95B /* AbilityTest.swift in Sources */,
 				5AD96FAA1DBEC21D005D4AFF /* CostFactoryTest.swift in Sources */,
 				5AD96FB31DBEC654005D4AFF /* StaminaUserTest.swift in Sources */,
+				5AA9051D1DCD3F5400AB7A3B /* TeamFactory.swift in Sources */,
+				5AA9050E1DCD294700AB7A3B /* UnitFactory.swift in Sources */,
 				96229BAF1DC6916100203457 /* Shielded.swift in Sources */,
+				5AA905201DCD3F5C00AB7A3B /* TeamFactoryTest.swift in Sources */,
+				5AA905141DCD374500AB7A3B /* TeamTest.swift in Sources */,
 				5AD96F991DBEB500005D4AFF /* ActionFactoryTest.swift in Sources */,
 				5ADE441B1DBFFA7600652629 /* DamageType.swift in Sources */,
 				96229BCD1DC6ED8200203457 /* ArmoredTest.swift in Sources */,
@@ -691,7 +730,9 @@
 				96229BA91DC68BEB00203457 /* Nameable.swift in Sources */,
 				9639BA261DC62B93000FC95B /* Weapon.swift in Sources */,
 				5AD96F8A1DBEB1A3005D4AFF /* Sourceable.swift in Sources */,
+				5AA905111DCD295600AB7A3B /* UnitFactoryTest.swift in Sources */,
 				9639BA661DC65BA4000FC95B /* Organic.swift in Sources */,
+				5AA905081DCD247F00AB7A3B /* SpartanCombatScene.swift in Sources */,
 				96229BB21DC6918E00203457 /* MockShielded.swift in Sources */,
 				9639BA6E1DC6603A000FC95B /* Combat.swift in Sources */,
 				96229BA11DC6802100203457 /* RandomAITest.swift in Sources */,
@@ -719,6 +760,7 @@
 				9639BA571DC64501000FC95B /* Attack.swift in Sources */,
 				9639BA621DC64E17000FC95B /* RandomizerTest.swift in Sources */,
 				9639BA381DC632E5000FC95B /* ArmableTest.swift in Sources */,
+				5AA9050B1DCD24B900AB7A3B /* HealthBarBinding.swift in Sources */,
 				5AD96FA71DBEC145005D4AFF /* CostFactory.swift in Sources */,
 				9639BA6B1DC65FC0000FC95B /* Grunt.swift in Sources */,
 				9639BA481DC63DF3000FC95B /* InventoryTest.swift in Sources */,

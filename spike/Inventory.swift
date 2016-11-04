@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Inventory {
+class Inventory: Sequence {
     
-    var items: [Item] = []
+    private var items: [Item] = []
     
     func getAbilities() -> [Ability] {
         var result: [Ability] = []
@@ -20,4 +20,35 @@ class Inventory {
         return result
     }
     
+    func append(_ item: Item) {
+        items.append(item)
+    }
+    
+    func makeIterator() -> ItemIterator {
+        return ItemIterator(array: items)
+    }
+    
+    subscript(index: Int) -> Item {
+        get {
+            return items[index]
+        }
+    }
+    
+}
+
+class ItemIterator: IteratorProtocol {
+    var index = -1
+    var array: [Item]
+    
+    init(array: [Item]) {
+        self.array = array
+    }
+    
+    func next() -> Item? {
+        index += 1
+        guard(index < array.count) else {
+            return nil
+        }
+        return array[index]
+    }
 }

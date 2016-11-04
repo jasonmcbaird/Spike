@@ -15,10 +15,8 @@ protocol Armored: Damageable {
 }
 
 extension Armored {
-    
-    // TODO: Need to call appendArmorClosure() before you take damage
-    
-    private func appendArmorClosure() {
+        
+    func appendArmoredClosures() {
         if(damageClosures["Armor"] == nil) {
             damageClosures.updateValue({amount, type in
                 if(amount > self.armor) {

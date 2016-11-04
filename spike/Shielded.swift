@@ -18,9 +18,7 @@ protocol Shielded: Damageable, Activatable {
 }
 
 extension Shielded {
-    
-    // TODO: Need to call appendClosures() before you take damage
-    
+        
     func rechargeShield() {
         shield += (maxShield / 2)
         if(shield > maxShield) {
@@ -28,7 +26,7 @@ extension Shielded {
         }
     }
     
-    private func appendClosures() {
+    func appendShieldedClosures() {
         appendShieldDamageClosure()
         appendShieldRechargeClosure()
     }

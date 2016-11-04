@@ -16,8 +16,8 @@ class InventoryTest: XCTestCase {
         let useable = MockUseable()
         let unit = MockFightable()
         
-        inventory.items.append(MockItem())
-        inventory.items.append(useable)
+        inventory.append(MockItem())
+        inventory.append(useable)
         inventory.getAbilities()[0].execute(source: unit, targets: [unit])
         
         XCTAssertEqual((useable.abilities[0].actions[0] as! MockAction).executeCount, 1)

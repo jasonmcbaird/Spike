@@ -9,13 +9,15 @@
 import Foundation
 
 class MockArmored: Armored {
-    
-    var health: Int = 5
+
+    var health = 5
+    var maxHealth = 5
+    var armor = 2
     var armorAmount: Int = 0
     var damageClosures: [String : (Int, DamageType) -> (Int)] = [:]
     
     init() {
-        armor = 2
+        appendArmoredClosures()
     }
     
 }

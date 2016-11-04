@@ -26,10 +26,11 @@ class Elite: Organic, Armable, RandomAI, Shielded, Nameable, Accurate {
     var shieldRechargeCounter: Int = 0
     var damageClosures: [String : (Int, DamageType) -> (Int)] = [:]
     
-    required init(name: String = "Voro Nar") {
+    init(name: String = "Voro Nar") {
         self.name = name
         self.health = maxHealth
         self.shield = maxShield
+        appendShieldedClosures()
     }
     
 }

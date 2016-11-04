@@ -19,7 +19,12 @@ class MockShielded: Shielded, Nameable {
     var activated = false
     
     var health = 5
+    var maxHealth = 5
     
     var name = "Shielded"
+    
+    init() {
+        appendShieldedClosures()
+    }
     
 }

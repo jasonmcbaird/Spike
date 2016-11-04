@@ -17,8 +17,8 @@ class Combat {
         get {
             var result = 0
             for team in teams {
-                if(team.activatables.count > result) {
-                    result = team.activatables.count
+                if(team.count > result) {
+                    result = team.count
                 }
             }
             return result
@@ -29,7 +29,7 @@ class Combat {
         get {
             var result = 0
             for team in teams {
-                if(team.isAlive()) {
+                if(team.isActive()) {
                     result += 1
                 }
             }
@@ -65,7 +65,7 @@ class Combat {
     }
     
     func activateNext(team: Team) {
-        for activatable in team.activatables {
+        for activatable in team {
             if(!activatable.activated) {
                 activatable.activate()
                 return
@@ -75,7 +75,7 @@ class Combat {
     
     func endRound() {
         for team in teams {
-            for activatable in team.activatables {
+            for activatable in team {
                 activatable.deactivate()
             }
         }
@@ -83,7 +83,7 @@ class Combat {
     
     private func canStillActivate() -> Bool {
         for team in teams {
-            for activatable in team.activatables {
+            for activatable in team {
                 if(!activatable.activated) {
                     return true
                 }

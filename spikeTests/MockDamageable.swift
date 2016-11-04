@@ -10,6 +10,8 @@ import Foundation
 
 class MockDamageable: Damageable {
     
+    var maxHealth = 5
+    
     var health: Int = 30
     var damageClosures: [String : (Int, DamageType) -> (Int)] = [:]
     

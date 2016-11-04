@@ -17,6 +17,7 @@ class MockMissableFightable: Fightable, Missable {
             damage -= newValue
         }
     }
+    var maxHealth = 5
     var damage = 0
     var missChance: Int = 20
     var missCount = 0

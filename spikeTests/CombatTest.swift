@@ -23,38 +23,38 @@ class CombatTest: XCTestCase {
     }
     
     func testStartCombat() {
-        red.activatables.removeAll()
-        red.activatables.append(MockSuicidalActivatable(team: red))
-        red.activatables.append(MockSuicidalActivatable(team: red))
+        red = Team(activatables: [MockSuicidalActivatable(), MockSuicidalActivatable()])
+        combat = Combat(teams: [red, blue])
         
         combat.startCombat()
         
-        XCTAssertEqual(red.activatables.count, 0)
-        XCTAssertEqual((blue.activatables[0] as! MockActivatable).turnCount, 4)
+        XCTAssertFalse(red.isActive())
+        XCTAssertEqual((blue[0] as! MockActivatable).turnCount, 4)
     }
     
     func testStartRound() {
         combat.startRound()
         
-        for activatable in red.activatables as! [MockActivatable] {
-            XCTAssertEqual(activatable.turnCount, 1)
-            XCTAssertTrue(activatable.activated)
+        for activatable in red {
+            let mock = activatable as! MockActivatable
+            XCTAssertEqual(mock.turnCount, 1)
+            XCTAssertTrue(mock.activated)
         }
     }
     
     func testStartTurn() {
         combat.startTurn()
         
-        XCTAssertEqual((red.activatables[0] as! MockActivatable).turnCount, 1)
-        XCTAssertEqual((blue.activatables[0] as! MockActivatable).turnCount, 1)
+        XCTAssertEqual((red[0] as! MockActivatable).turnCount, 1)
+        XCTAssertEqual((blue[0] as! MockActivatable).turnCount, 1)
 
-        XCTAssertTrue((red.activatables[0] as! MockActivatable).activated)
-        XCTAssertTrue((blue.activatables[0] as! MockActivatable).activated)
+        XCTAssertTrue((red[0] as! MockActivatable).activated)
+        XCTAssertTrue((blue[0] as! MockActivatable).activated)
     }
     
     func testEndRound() {
-        let redOne = red.activatables[0] as! MockActivatable
-        let blueThree = red.activatables[2] as! MockActivatable
+        let redOne = red[0] as! MockActivatable
+        let blueThree = red[2] as! MockActivatable
         
         redOne.activated = true
         blueThree.activated = true
@@ -67,16 +67,21 @@ class CombatTest: XCTestCase {
     
     class MockSuicidalActivatable: MockActivatable {
         
-        let team: Team
+        var dead = false
+        private var privateActivated = false
+        override var activated: Bool {
+            get {
+                return dead || privateActivated
+            } set {
+                privateActivated = newValue
+            }
+        }
         
-        init(team: Team) {
-            self.team = team
+        override init() {
             super.init()
             activationClosures.updateValue({
                 if(self.turnCount >= 3) {
-                    self.team.activatables = self.team.activatables.filter( {
-                        $0 !== self
-                    })
+                    self.dead = true
                 }
             }, forKey: "Suicide")
         }

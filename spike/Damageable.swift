@@ -13,6 +13,7 @@ protocol Damageable: class {
     func takeDamage(amount: Int, type: DamageType)
     
     var health: Int { get set }
+    var maxHealth: Int { get set }
     var damageClosures: [String: (Int, DamageType) -> (Int)] { get set }
     
 }

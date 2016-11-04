@@ -20,6 +20,7 @@ class MockFightable: Fightable, Nameable {
             damage -= newValue
         }
     }
+    var maxHealth = 1
     
     var damage = 0
     
