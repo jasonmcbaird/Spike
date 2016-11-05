@@ -1,0 +1,40 @@
+{
+    "Assault Rifle": {
+        "range": 3,
+        "minDamage": 3,
+        "maxDamage": 4,
+        "clipSize": 4
+    },
+    "Battle Rifle": {
+        "range": 7,
+        "minDamage": 3,
+        "maxDamage": 4,
+        "clipSize": 4,
+        "crit": 4
+    },
+    "Shotgun": {
+        "range": 2,
+        "minDamage": 10,
+        "maxDamage": 14,
+        "clipSize": 3
+    },
+    "Sniper Rifle": {
+        "range": 12,
+        "minDamage": 6,
+        "maxDamage": 10,
+        "clipSize": 2,
+        "crit": 6
+    },
+    "Plasma Pistol": {
+        "range": 5,
+        "minDamage": 1,
+        "maxDamage": 2,
+        "damageType": "Plasma"
+    },
+    "Plasma Rifle": {
+        "range": 3,
+        "minDamage": 3,
+        "maxDamage": 4,
+        "damageType": "Plasma"
+    }
+}

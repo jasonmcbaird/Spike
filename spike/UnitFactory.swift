@@ -10,7 +10,7 @@ import Foundation
 
 class UnitFactory {
     
-    lazy var weaponFactory = WeaponFactory()
+    let weaponFactory = WeaponFactory()
     
     func createUnit(type: String, name: String) -> Activatable {
         switch(type) {

@@ -12,33 +12,36 @@ class TeamFactory {
     
     let unitFactory = UnitFactory()
     
-    func createTeams(filename: String) -> [String: Team] {
-        
-        let path = Bundle.main.url(forResource: filename, withExtension: "json")
-        let data = try? Data(contentsOf: path!)
-        
-        return createTeams(jsonData: data!)
+    var teams: [String: Team]!
+    
+    init(filename: String = "MockTeams") {
+        teams = createTeams(dictionary: JSON.parseJSON(filename: filename))
     }
     
-    func createTeams(jsonData: Data) -> [String: Team] {
+    private func createTeams(dictionary: [String: Any]) -> [String: Team] {
         var result: [String: Team] = [:]
-        let teamObjects = try? JSONSerialization.jsonObject(with: jsonData, options: []) as! [String: Any]
-        for teamName in teamObjects!.keys {
-            let team = Team(activatables: [])
-            let teamJSON = teamObjects![teamName] as! [String: Any]
-            for unitName in teamJSON.keys {
-                let unitJSON = teamJSON[unitName] as! [String: Any]
-                var unit: Activatable
-                if(unitJSON.keys.contains("weapon")) {
-                    unit = unitFactory.createArmedUnit(type: unitJSON["type"] as! String, name: unitName, weapon: unitJSON["weapon"] as! String)
-                } else {
-                    unit = unitFactory.createUnit(type: unitJSON["type"] as! String, name: unitName)
-                }
-                team.append(unit)
-            }
+        for teamName in dictionary.keys {
+            let team = parseTeam(name: teamName, dictionary: dictionary[teamName] as! [String: Any])
             result.updateValue(team, forKey: teamName)
         }
         return result
+    }
+    
+    private func parseTeam(name: String, dictionary: [String: Any]) -> Team {
+        let team = Team(activatables: [])
+        for unitName in dictionary.keys {
+            let unit = parseUnit(name: unitName, dictionary: dictionary[unitName] as! [String: Any])
+            team.append(unit)
+        }
+        return team
+    }
+    
+    private func parseUnit(name: String, dictionary: [String: Any]) -> Activatable {
+        if(dictionary.keys.contains("weapon")) {
+            return unitFactory.createArmedUnit(type: dictionary["type"] as! String, name: name, weapon: dictionary["weapon"] as! String)
+        } else {
+            return unitFactory.createUnit(type: dictionary["type"] as! String, name: name)
+        }
     }
     
 }

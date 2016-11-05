@@ -10,21 +10,9 @@ import Foundation
 import GameplayKit
 
 class ActionFactory {
-        
-    static func createAction(name: String, amount: Int) -> Action {
-        let result = BasicAttack(min: amount, max: amount)
-        if(name == "PlasmaAttack") {
-            result.type = DamageType.plasma
-        }
-        return result
-    }
     
-    static func createAction(name: String, amount: Int, nextAmount: Int) -> Action {
-        let result = BasicAttack(min: amount, max: nextAmount)
-        if(name == "PlasmaAttack") {
-            result.type = DamageType.plasma
-        }
-        return result
+    static func createAttack(minDamage: Int, maxDamage: Int, type: DamageType = DamageType.physical) -> Attack {
+        return BasicAttack(min: minDamage, max: maxDamage, type: type)
     }
 }
 
@@ -33,9 +21,10 @@ class BasicAttack: Attack {
     let max: Int
     var type: DamageType = DamageType.physical
     
-    init(min: Int, max: Int) {
+    init(min: Int, max: Int, type: DamageType = DamageType.physical) {
         self.min = min
         self.max = max
+        self.type = type
     }
     
     func execute(source: Sourceable, targets: [Targetable]) {

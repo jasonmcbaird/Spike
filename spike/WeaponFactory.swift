@@ -10,83 +10,79 @@ import Foundation
 
 class WeaponFactory {
     
+    var weaponDictionary: [String: Weapon]!
+    
+    init(filename: String = "MockWeapons") {
+        weaponDictionary = createWeapons(dictionary: JSON.parseJSON(filename: "MockWeapons"))
+    }
+    
     func createWeapon(name: String) -> Weapon {
-        switch(name) {
-        case "Assault Rifle":
-            return AssaultRifle()
-        case "Sniper Rifle":
-            return SniperRifle()
-        case "Plasma Pistol":
-            return PlasmaPistol()
-        case "Plasma Rifle":
-            return PlasmaRifle()
-        default:
-            return AssaultRifle()
+        return weaponDictionary[name]!
+    }
+    
+    private func createWeapons(dictionary: [String: Any]) -> [String: Weapon] {
+        var result: [String: Weapon] = [:]
+        for weaponName in dictionary.keys {
+            let weapon = parseWeapon(name: weaponName, dictionary: dictionary[weaponName] as! [String : Any])
+            result.updateValue(weapon, forKey: weaponName)
+        }
+        return result
+    }
+    
+    private func parseWeapon(name: String, dictionary: [String: Any]) -> Weapon {
+        if(dictionary.keys.contains("clipSize")) {
+            return ReloadableWeapon(range: dictionary["range"] as! Int, minDamage: dictionary["minDamage"] as! Int, maxDamage: dictionary["maxDamage"] as! Int, clipSize: dictionary["clipSize"] as! Int)
+        } else {
+            return BasicWeapon(range: dictionary["range"] as! Int, minDamage: dictionary["minDamage"] as! Int, maxDamage: dictionary["maxDamage"] as! Int)
         }
     }
 }
 
-class AssaultRifle: Reloadable {
+class BasicWeapon: Weapon {
+    let range: Int
+    let minDamage: Int
+    let maxDamage: Int
+    let damageType: DamageType
     
-    let range: Int = 3
-    let minDamage: Int = 3
-    let maxDamage: Int = 4
-    let clipSize = 4
-    var ammo = 4
+    init(range: Int, minDamage: Int, maxDamage: Int, damageType: DamageType = DamageType.physical) {
+        self.range = range
+        self.minDamage = minDamage
+        self.maxDamage = maxDamage
+        self.damageType = damageType
+    }
+    
     lazy var attackAbilities: [Ability] = [self.getAttackAbility()]
-    
-    private func getAttackAbility() -> Ability {
-        return Ability(costs: [AmmoCost(weapon: self)], actions: [ActionFactory.createAction(name: "Attack", amount: minDamage, nextAmount: maxDamage)])
-    }
-    
-}
-
-class SniperRifle: Reloadable {
-    
-    let range: Int = 16
-    let minDamage: Int = 6
-    let maxDamage: Int = 10
-    let clipSize = 4
-    var ammo = 4
-    lazy var attackAbilities: [Ability] = [self.getAttackAbility()]
-    
-    private func getAttackAbility() -> Ability {
-        return Ability(costs: [AmmoCost(weapon: self)], actions: [ActionFactory.createAction(name: "Attack", amount: minDamage, nextAmount: maxDamage)])
-    }
-}
-
-class PlasmaPistol: Weapon {
-    
-    let range: Int = 4
-    let minDamage: Int = 1
-    let maxDamage: Int = 2
-    var attackAbilities: [Ability]
-    
-    init() {
-        attackAbilities = [Ability(costs: [], actions: [ActionFactory.createAction(name: "PlasmaAttack", amount: minDamage, nextAmount: maxDamage)])]
-    }
-    
     var abilities: [Ability] {
         get {
             return attackAbilities
         }
     }
+    
+    private func getAttackAbility() -> Ability {
+        return Ability(costs: [], actions: [ActionFactory.createAttack(minDamage: minDamage, maxDamage: maxDamage, type: damageType)])
+    }
 }
 
-class PlasmaRifle: Weapon {
+class ReloadableWeapon: Reloadable {
+    let range: Int
+    let minDamage: Int
+    let maxDamage: Int
+    let clipSize: Int
+    let damageType: DamageType
+    var ammo: Int
     
-    let range: Int = 3
-    let minDamage: Int = 3
-    let maxDamage: Int = 4
-    var attackAbilities: [Ability]
-    
-    init() {
-        attackAbilities = [Ability(costs: [], actions: [ActionFactory.createAction(name: "PlasmaAttack", amount: minDamage, nextAmount: maxDamage)])]
+    init(range: Int, minDamage: Int, maxDamage: Int, clipSize: Int, damageType: DamageType = DamageType.physical) {
+        self.range = range
+        self.minDamage = minDamage
+        self.maxDamage = maxDamage
+        self.clipSize = clipSize
+        self.ammo = clipSize
+        self.damageType = damageType
     }
     
-    var abilities: [Ability] {
-        get {
-            return attackAbilities
-        }
+    lazy var attackAbilities: [Ability] = [self.getAttackAbility()]
+    
+    private func getAttackAbility() -> Ability {
+        return Ability(costs: [AmmoCost(weapon: self)], actions: [ActionFactory.createAttack(minDamage: minDamage, maxDamage: maxDamage, type: damageType)])
     }
 }

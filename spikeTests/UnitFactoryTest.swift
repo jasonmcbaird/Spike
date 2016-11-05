@@ -21,7 +21,7 @@ class UnitFactoryTest: XCTestCase {
     
     func testWithWeapon() {
         let spartan: Spartan = factory.createArmedUnit(type: "Spartan", name: "John", weapon: "Sniper Rifle") as! Spartan
-        XCTAssert(spartan.inventory[0] is SniperRifle)
+        XCTAssert(spartan.inventory[0] is Weapon)
     }
     
 }

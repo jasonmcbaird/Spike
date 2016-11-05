@@ -11,7 +11,7 @@ import XCTest
 class ActionFactoryTest: XCTestCase {
     
     func testVariableAttack() {
-        let action = ActionFactory.createAction(name: "Attack", amount: 3, nextAmount: 4)
+        let action = ActionFactory.createAttack(minDamage: 3, maxDamage: 4)
         let unit = MockFightable()
         
         for _ in 1...100 {
