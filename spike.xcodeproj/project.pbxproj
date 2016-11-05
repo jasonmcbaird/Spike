@@ -313,7 +313,7 @@
 		5ACC05171DBE9DFB00B52D3D /* spike */ = {
 			isa = PBXGroup;
 			children = (
-				965B6ED91DCE40B900C3034B /* StatImports */,
+				965B6ED91DCE40B900C3034B /* Stats */,
 				96229BB61DC6A29D00203457 /* Utility */,
 				9639BA2A1DC62E44000FC95B /* Ability.swift */,
 				969FF7A81DC629E900E44E06 /* Inventory.swift */,
@@ -514,13 +514,13 @@
 			name = Amalgams;
 			sourceTree = "<group>";
 		};
-		965B6ED91DCE40B900C3034B /* StatImports */ = {
+		965B6ED91DCE40B900C3034B /* Stats */ = {
 			isa = PBXGroup;
 			children = (
 				5AA905181DCD3DA900AB7A3B /* Teams.json */,
 				965B6ED31DCE30DA00C3034B /* Weapons.json */,
 			);
-			name = StatImports;
+			name = Stats;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -13,7 +13,7 @@ class SpartanCombatScene {
     
     var humans: Team!
     var aliens: Team!
-    let factory = TeamFactory(filename: "MockTeams")
+    let factory = TeamFactory(filename: "Teams")
     
     init() {
         humans = factory.teams["North Forge"]
