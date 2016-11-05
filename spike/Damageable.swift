@@ -26,13 +26,20 @@ extension Damageable {
     
     func takeDamage(amount: Int, type: DamageType) {
         var result = amount
-        for closure in damageClosures.values {
-            result = closure(result, type)
+        for key in damageClosures.keys {
+            if(!key.contains("After:")) {
+                result = damageClosures[key]!(result, type)
+            }
         }
         health -= result
         if(health <= 0) {
             health = 0
             (self as? Activatable)?.activated = true
+        }
+        for key in damageClosures.keys {
+            if(key.contains("After:")) {
+                result = damageClosures[key]!(result, type)
+            }
         }
     }
 }

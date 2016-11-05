@@ -138,6 +138,21 @@
 		965B6ED61DCE35F100C3034B /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6ED51DCE35F100C3034B /* JSON.swift */; };
 		965B6ED71DCE3BF900C3034B /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6ED51DCE35F100C3034B /* JSON.swift */; };
 		965B6ED81DCE3C2700C3034B /* Weapons.json in Resources */ = {isa = PBXBuildFile; fileRef = 965B6ED31DCE30DA00C3034B /* Weapons.json */; };
+		965B6EDB1DCE42A800C3034B /* CombatVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EDA1DCE42A800C3034B /* CombatVisualizer.swift */; };
+		965B6EDD1DCE469800C3034B /* UnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EDC1DCE469800C3034B /* UnitCell.swift */; };
+		965B6EDF1DCE489800C3034B /* UnitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EDE1DCE489800C3034B /* UnitTableViewController.swift */; };
+		965B6EE01DCE497100C3034B /* UnitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EDE1DCE489800C3034B /* UnitTableViewController.swift */; };
+		965B6EE11DCE497400C3034B /* UnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EDC1DCE469800C3034B /* UnitCell.swift */; };
+		965B6EE21DCE497A00C3034B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC05201DBE9DFB00B52D3D /* GameViewController.swift */; };
+		965B6EE41DCE511400C3034B /* HealthVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EE31DCE511400C3034B /* HealthVisualizer.swift */; };
+		965B6EE61DCE521900C3034B /* UnitVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EE51DCE521900C3034B /* UnitVisualizer.swift */; };
+		965B6EE71DCE536E00C3034B /* UnitVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EE51DCE521900C3034B /* UnitVisualizer.swift */; };
+		965B6EE91DCE5ED400C3034B /* ShieldedUnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EE81DCE5ED400C3034B /* ShieldedUnitCell.swift */; };
+		965B6EEB1DCE5F7100C3034B /* ShieldBarBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EEA1DCE5F7100C3034B /* ShieldBarBinding.swift */; };
+		965B6EED1DCE5F9100C3034B /* ShieldVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EEC1DCE5F9100C3034B /* ShieldVisualizer.swift */; };
+		965B6EEE1DCE636F00C3034B /* ShieldedUnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EE81DCE5ED400C3034B /* ShieldedUnitCell.swift */; };
+		965B6EF01DCE66CD00C3034B /* SelectedBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EEF1DCE66CD00C3034B /* SelectedBinding.swift */; };
+		965B6EF11DCE66CD00C3034B /* SelectedBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6EEF1DCE66CD00C3034B /* SelectedBinding.swift */; };
 		969FF7A71DC6296600E44E06 /* Marine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969FF7A61DC6296600E44E06 /* Marine.swift */; };
 		969FF7A91DC629E900E44E06 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969FF7A81DC629E900E44E06 /* Inventory.swift */; };
 		969FF7AB1DC62A2500E44E06 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969FF7AA1DC62A2500E44E06 /* Item.swift */; };
@@ -258,6 +273,15 @@
 		9639BA751DC661FA000FC95B /* Activatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activatable.swift; sourceTree = "<group>"; };
 		965B6ED31DCE30DA00C3034B /* Weapons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Weapons.json; path = spikeTests/Weapons.json; sourceTree = SOURCE_ROOT; };
 		965B6ED51DCE35F100C3034B /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		965B6EDA1DCE42A800C3034B /* CombatVisualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombatVisualizer.swift; sourceTree = "<group>"; };
+		965B6EDC1DCE469800C3034B /* UnitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitCell.swift; sourceTree = "<group>"; };
+		965B6EDE1DCE489800C3034B /* UnitTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTableViewController.swift; sourceTree = "<group>"; };
+		965B6EE31DCE511400C3034B /* HealthVisualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthVisualizer.swift; sourceTree = "<group>"; };
+		965B6EE51DCE521900C3034B /* UnitVisualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitVisualizer.swift; sourceTree = "<group>"; };
+		965B6EE81DCE5ED400C3034B /* ShieldedUnitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShieldedUnitCell.swift; sourceTree = "<group>"; };
+		965B6EEA1DCE5F7100C3034B /* ShieldBarBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShieldBarBinding.swift; sourceTree = "<group>"; };
+		965B6EEC1DCE5F9100C3034B /* ShieldVisualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShieldVisualizer.swift; sourceTree = "<group>"; };
+		965B6EEF1DCE66CD00C3034B /* SelectedBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedBinding.swift; sourceTree = "<group>"; };
 		969FF7A61DC6296600E44E06 /* Marine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marine.swift; sourceTree = "<group>"; };
 		969FF7A81DC629E900E44E06 /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		969FF7AA1DC62A2500E44E06 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -314,7 +338,6 @@
 			isa = PBXGroup;
 			children = (
 				965B6ED91DCE40B900C3034B /* Stats */,
-				96229BB61DC6A29D00203457 /* Utility */,
 				9639BA2A1DC62E44000FC95B /* Ability.swift */,
 				969FF7A81DC629E900E44E06 /* Inventory.swift */,
 				9639BA6C1DC6603A000FC95B /* Combat.swift */,
@@ -322,11 +345,14 @@
 				9636DD3B1DC6721F00323BB8 /* AmmoCost.swift */,
 				5AA905061DCD247F00AB7A3B /* SpartanCombatScene.swift */,
 				5AA905091DCD24B900AB7A3B /* HealthBarBinding.swift */,
+				965B6EEA1DCE5F7100C3034B /* ShieldBarBinding.swift */,
+				965B6EEF1DCE66CD00C3034B /* SelectedBinding.swift */,
 				5AD96F951DBEB2F6005D4AFF /* Factories */,
 				5AD96F821DBEB0E1005D4AFF /* Enums */,
 				5ACC05761DBEAF1B00B52D3D /* Protocols */,
 				5ACC054F1DBE9EB000B52D3D /* Units */,
 				9639BA291DC62E2E000FC95B /* Build */,
+				96229BB61DC6A29D00203457 /* Utility */,
 			);
 			path = spike;
 			sourceTree = "<group>";
@@ -366,6 +392,8 @@
 			isa = PBXGroup;
 			children = (
 				5AD96F851DBEB163005D4AFF /* Sourceable.swift */,
+				965B6EDA1DCE42A800C3034B /* CombatVisualizer.swift */,
+				965B6EEC1DCE5F9100C3034B /* ShieldVisualizer.swift */,
 				96229BA71DC68BEB00203457 /* Nameable.swift */,
 				5AD96F871DBEB183005D4AFF /* Targetable.swift */,
 				5AD96F8E1DBEB1F3005D4AFF /* Action.swift */,
@@ -375,6 +403,7 @@
 				9639BA3F1DC63638000FC95B /* Useable.swift */,
 				969FF7AE1DC62A4300E44E06 /* Weapon.swift */,
 				96229BC01DC6C88D00203457 /* Accurate.swift */,
+				965B6EE31DCE511400C3034B /* HealthVisualizer.swift */,
 				9639BA461DC63956000FC95B /* Amalgams */,
 				5AD96FA31DBEBB67005D4AFF /* Extensions */,
 			);
@@ -470,10 +499,14 @@
 				5ACC051C1DBE9DFB00B52D3D /* Actions.sks */,
 				5ACC051E1DBE9DFB00B52D3D /* GameScene.swift */,
 				5ACC05201DBE9DFB00B52D3D /* GameViewController.swift */,
+				965B6EDE1DCE489800C3034B /* UnitTableViewController.swift */,
 				5ACC05221DBE9DFB00B52D3D /* Main.storyboard */,
 				5ACC05251DBE9DFB00B52D3D /* Assets.xcassets */,
 				5ACC05271DBE9DFB00B52D3D /* LaunchScreen.storyboard */,
 				5ACC052A1DBE9DFB00B52D3D /* Info.plist */,
+				965B6EDC1DCE469800C3034B /* UnitCell.swift */,
+				965B6EE81DCE5ED400C3034B /* ShieldedUnitCell.swift */,
+				965B6EE51DCE521900C3034B /* UnitVisualizer.swift */,
 			);
 			name = Build;
 			sourceTree = "<group>";
@@ -668,19 +701,24 @@
 			files = (
 				9636DD351DC66C7B00323BB8 /* Reloadable.swift in Sources */,
 				5AD96FA61DBEC145005D4AFF /* CostFactory.swift in Sources */,
+				965B6EED1DCE5F9100C3034B /* ShieldVisualizer.swift in Sources */,
 				96229BCA1DC6ECF200203457 /* MockArmored.swift in Sources */,
 				5AD96F8F1DBEB1F3005D4AFF /* Action.swift in Sources */,
 				5AA9050D1DCD294700AB7A3B /* UnitFactory.swift in Sources */,
 				9639BA3D1DC634A6000FC95B /* Armable.swift in Sources */,
+				965B6EDD1DCE469800C3034B /* UnitCell.swift in Sources */,
 				9639BA401DC63638000FC95B /* Useable.swift in Sources */,
 				5AA9051C1DCD3F5400AB7A3B /* TeamFactory.swift in Sources */,
 				96229BC71DC6E95A00203457 /* Armored.swift in Sources */,
 				969FF7B11DC62A9E00E44E06 /* WeaponFactory.swift in Sources */,
 				96229BAE1DC6916100203457 /* Shielded.swift in Sources */,
 				5AA905071DCD247F00AB7A3B /* SpartanCombatScene.swift in Sources */,
+				965B6EDF1DCE489800C3034B /* UnitTableViewController.swift in Sources */,
+				965B6EE91DCE5ED400C3034B /* ShieldedUnitCell.swift in Sources */,
 				969FF7AB1DC62A2500E44E06 /* Item.swift in Sources */,
 				5AA9050A1DCD24B900AB7A3B /* HealthBarBinding.swift in Sources */,
 				5ACC051F1DBE9DFB00B52D3D /* GameScene.swift in Sources */,
+				965B6EE61DCE521900C3034B /* UnitVisualizer.swift in Sources */,
 				9639BA501DC6435A000FC95B /* Missable.swift in Sources */,
 				9639BA761DC661FA000FC95B /* Activatable.swift in Sources */,
 				9639BA6A1DC65E38000FC95B /* Grunt.swift in Sources */,
@@ -697,12 +735,15 @@
 				9639BA701DC66088000FC95B /* Team.swift in Sources */,
 				5ACC05191DBE9DFB00B52D3D /* AppDelegate.swift in Sources */,
 				96229B9F1DC67FB000203457 /* RandomAI.swift in Sources */,
+				965B6EF01DCE66CD00C3034B /* SelectedBinding.swift in Sources */,
 				969FF7A91DC629E900E44E06 /* Inventory.swift in Sources */,
 				5AD96FAC1DBEC33E005D4AFF /* StaminaUser.swift in Sources */,
 				5ADE441A1DBFFA7600652629 /* DamageType.swift in Sources */,
 				5AD96F861DBEB163005D4AFF /* Sourceable.swift in Sources */,
 				965B6ED61DCE35F100C3034B /* JSON.swift in Sources */,
 				96229BC11DC6C88D00203457 /* Accurate.swift in Sources */,
+				965B6EDB1DCE42A800C3034B /* CombatVisualizer.swift in Sources */,
+				965B6EEB1DCE5F7100C3034B /* ShieldBarBinding.swift in Sources */,
 				5AD96F881DBEB183005D4AFF /* Targetable.swift in Sources */,
 				96229B981DC67B5B00203457 /* Commandable.swift in Sources */,
 				96229BA81DC68BEB00203457 /* Nameable.swift in Sources */,
@@ -712,6 +753,7 @@
 				5AD96F811DBEB0BC005D4AFF /* Damageable.swift in Sources */,
 				96229BB11DC6918E00203457 /* MockShielded.swift in Sources */,
 				969FF7AF1DC62A4300E44E06 /* Weapon.swift in Sources */,
+				965B6EE41DCE511400C3034B /* HealthVisualizer.swift in Sources */,
 				9639BA521DC64410000FC95B /* Attack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -729,6 +771,7 @@
 				9636DD371DC66D1100323BB8 /* ReloadableTest.swift in Sources */,
 				9636DD311DC6681D00323BB8 /* MockActivatable.swift in Sources */,
 				5AD96F971DBEB31C005D4AFF /* Cost.swift in Sources */,
+				965B6EE71DCE536E00C3034B /* UnitVisualizer.swift in Sources */,
 				9639BA2D1DC62E53000FC95B /* AbilityTest.swift in Sources */,
 				5AD96FAA1DBEC21D005D4AFF /* CostFactoryTest.swift in Sources */,
 				5AD96FB31DBEC654005D4AFF /* StaminaUserTest.swift in Sources */,
@@ -744,10 +787,13 @@
 				9639BA741DC660CE000FC95B /* CombatTest.swift in Sources */,
 				9639BA711DC66088000FC95B /* Team.swift in Sources */,
 				5AD96FAD1DBEC33E005D4AFF /* StaminaUser.swift in Sources */,
+				965B6EEE1DCE636F00C3034B /* ShieldedUnitCell.swift in Sources */,
+				965B6EF11DCE66CD00C3034B /* SelectedBinding.swift in Sources */,
 				9636DD331DC6683100323BB8 /* ActivatableTest.swift in Sources */,
 				9636DD391DC66F0F00323BB8 /* MockReloadable.swift in Sources */,
 				96229BA91DC68BEB00203457 /* Nameable.swift in Sources */,
 				9639BA261DC62B93000FC95B /* Weapon.swift in Sources */,
+				965B6EE21DCE497A00C3034B /* GameViewController.swift in Sources */,
 				5AD96F8A1DBEB1A3005D4AFF /* Sourceable.swift in Sources */,
 				5AA905111DCD295600AB7A3B /* UnitFactoryTest.swift in Sources */,
 				9639BA661DC65BA4000FC95B /* Organic.swift in Sources */,
@@ -775,6 +821,7 @@
 				9639BA431DC63825000FC95B /* MockAction.swift in Sources */,
 				96229BC51DC6D5D300203457 /* Elite.swift in Sources */,
 				969FF7AC1DC62A3000E44E06 /* Inventory.swift in Sources */,
+				965B6EE01DCE497100C3034B /* UnitTableViewController.swift in Sources */,
 				96229BA31DC6809800203457 /* MockRandomAI.swift in Sources */,
 				9639BA651DC65948000FC95B /* MockMissableUnit.swift in Sources */,
 				9639BA571DC64501000FC95B /* Attack.swift in Sources */,
@@ -782,6 +829,7 @@
 				9639BA381DC632E5000FC95B /* ArmableTest.swift in Sources */,
 				5AA9050B1DCD24B900AB7A3B /* HealthBarBinding.swift in Sources */,
 				5AD96FA71DBEC145005D4AFF /* CostFactory.swift in Sources */,
+				965B6EE11DCE497400C3034B /* UnitCell.swift in Sources */,
 				9639BA6B1DC65FC0000FC95B /* Grunt.swift in Sources */,
 				9639BA481DC63DF3000FC95B /* InventoryTest.swift in Sources */,
 				9639BA5B1DC648EC000FC95B /* MockMissable.swift in Sources */,

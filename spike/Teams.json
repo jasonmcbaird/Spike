@@ -2,11 +2,11 @@
 	"North Forge": {
 			"John": {
 				"type": "Spartan",
-				"weapon": "Shotgun"
+				"weapon": "Sniper Rifle"
 			},
 			"Jason": {
 				"type": "Marine",
-				"weapon": "Assault Rifle"
+				"weapon": "Battle Rifle"
 			},
 			"Cody": {
 				"type": "Marine",
