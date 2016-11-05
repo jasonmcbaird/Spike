@@ -10,6 +10,6 @@ import Foundation
 
 class MockMissable: Missable {
     
-    var missChance: Int = 20
+    var dodge: Int = 20
     
 }

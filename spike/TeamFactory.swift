@@ -14,7 +14,7 @@ class TeamFactory {
     
     var teams: [String: Team]!
     
-    init(filename: String = "MockTeams") {
+    init(filename: String = "Teams") {
         teams = createTeams(dictionary: JSON.parseJSON(filename: filename))
     }
     

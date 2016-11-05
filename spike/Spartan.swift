@@ -12,7 +12,7 @@ class Spartan: Organic, Armable, RandomAI, Shielded, Armored, Nameable, Accurate
     
     var name: String
     var maxHealth: Int = 20
-    var missChance: Int = 40
+    var dodge: Int = 40
     var maxShield: Int = 15
     var armor = 1
     var shieldRechargeDelay: Int = 2

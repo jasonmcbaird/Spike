@@ -12,7 +12,7 @@ class Marine: Organic, Armable, RandomAI, Nameable {
     
     var name: String
     var maxHealth: Int = 10
-    var missChance: Int = 20
+    var dodge: Int = 20
     let inventory: Inventory = Inventory()
     
     var health: Int

@@ -11,7 +11,7 @@ import GameplayKit
 
 protocol Missable: Targetable {
     
-    var missChance: Int { get }
+    var dodge: Int { get }
     
     func checkHit(mod: Int) -> Bool
     
@@ -20,7 +20,7 @@ protocol Missable: Targetable {
 extension Missable {
     
     func checkHit(mod: Int = 0) -> Bool {
-        return Randomizer.rollDie(100) + mod >= missChance
+        return Randomizer.rollDie(100) + mod >= dodge
     }
     
 }

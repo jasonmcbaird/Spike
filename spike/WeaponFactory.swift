@@ -12,8 +12,8 @@ class WeaponFactory {
     
     var weaponDictionary: [String: Weapon]!
     
-    init(filename: String = "MockWeapons") {
-        weaponDictionary = createWeapons(dictionary: JSON.parseJSON(filename: "MockWeapons"))
+    init(filename: String = "Weapons") {
+        weaponDictionary = createWeapons(dictionary: JSON.parseJSON(filename: filename))
     }
     
     func createWeapon(name: String) -> Weapon {

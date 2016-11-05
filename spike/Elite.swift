@@ -12,7 +12,7 @@ class Elite: Organic, Armable, RandomAI, Shielded, Nameable, Accurate {
     
     var name: String
     var maxHealth: Int = 20
-    var missChance: Int = 35
+    var dodge: Int = 35
     var maxShield: Int = 10
     var shieldRechargeDelay: Int = 3
     let inventory: Inventory = Inventory()

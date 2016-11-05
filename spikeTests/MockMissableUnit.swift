@@ -19,7 +19,7 @@ class MockMissableFightable: Fightable, Missable {
     }
     var maxHealth = 5
     var damage = 0
-    var missChance: Int = 20
+    var dodge: Int = 20
     var missCount = 0
     var damageClosures: [String : (Int, DamageType) -> (Int)] = [:]
     

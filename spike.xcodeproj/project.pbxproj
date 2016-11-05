@@ -17,11 +17,11 @@
 		5AA9050E1DCD294700AB7A3B /* UnitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9050C1DCD294700AB7A3B /* UnitFactory.swift */; };
 		5AA905111DCD295600AB7A3B /* UnitFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9050F1DCD295600AB7A3B /* UnitFactoryTest.swift */; };
 		5AA905141DCD374500AB7A3B /* TeamTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA905121DCD374400AB7A3B /* TeamTest.swift */; };
-		5AA9051A1DCD3DA900AB7A3B /* MockTeams.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AA905181DCD3DA900AB7A3B /* MockTeams.json */; };
+		5AA9051A1DCD3DA900AB7A3B /* Teams.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AA905181DCD3DA900AB7A3B /* Teams.json */; };
 		5AA9051C1DCD3F5400AB7A3B /* TeamFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9051B1DCD3F5400AB7A3B /* TeamFactory.swift */; };
 		5AA9051D1DCD3F5400AB7A3B /* TeamFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9051B1DCD3F5400AB7A3B /* TeamFactory.swift */; };
 		5AA905201DCD3F5C00AB7A3B /* TeamFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9051E1DCD3F5C00AB7A3B /* TeamFactoryTest.swift */; };
-		5AA905271DCD486C00AB7A3B /* MockTeams.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AA905181DCD3DA900AB7A3B /* MockTeams.json */; };
+		5AA905271DCD486C00AB7A3B /* Teams.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AA905181DCD3DA900AB7A3B /* Teams.json */; };
 		5ACC05191DBE9DFB00B52D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC05181DBE9DFB00B52D3D /* AppDelegate.swift */; };
 		5ACC051B1DBE9DFB00B52D3D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5ACC051A1DBE9DFB00B52D3D /* GameScene.sks */; };
 		5ACC051D1DBE9DFB00B52D3D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5ACC051C1DBE9DFB00B52D3D /* Actions.sks */; };
@@ -134,10 +134,10 @@
 		9639BA741DC660CE000FC95B /* CombatTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA721DC660CE000FC95B /* CombatTest.swift */; };
 		9639BA761DC661FA000FC95B /* Activatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA751DC661FA000FC95B /* Activatable.swift */; };
 		9639BA771DC661FA000FC95B /* Activatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639BA751DC661FA000FC95B /* Activatable.swift */; };
-		965B6ED41DCE30DA00C3034B /* MockWeapons.json in Resources */ = {isa = PBXBuildFile; fileRef = 965B6ED31DCE30DA00C3034B /* MockWeapons.json */; };
+		965B6ED41DCE30DA00C3034B /* Weapons.json in Resources */ = {isa = PBXBuildFile; fileRef = 965B6ED31DCE30DA00C3034B /* Weapons.json */; };
 		965B6ED61DCE35F100C3034B /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6ED51DCE35F100C3034B /* JSON.swift */; };
 		965B6ED71DCE3BF900C3034B /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B6ED51DCE35F100C3034B /* JSON.swift */; };
-		965B6ED81DCE3C2700C3034B /* MockWeapons.json in Resources */ = {isa = PBXBuildFile; fileRef = 965B6ED31DCE30DA00C3034B /* MockWeapons.json */; };
+		965B6ED81DCE3C2700C3034B /* Weapons.json in Resources */ = {isa = PBXBuildFile; fileRef = 965B6ED31DCE30DA00C3034B /* Weapons.json */; };
 		969FF7A71DC6296600E44E06 /* Marine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969FF7A61DC6296600E44E06 /* Marine.swift */; };
 		969FF7A91DC629E900E44E06 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969FF7A81DC629E900E44E06 /* Inventory.swift */; };
 		969FF7AB1DC62A2500E44E06 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969FF7AA1DC62A2500E44E06 /* Item.swift */; };
@@ -171,7 +171,7 @@
 		5AA9050C1DCD294700AB7A3B /* UnitFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitFactory.swift; sourceTree = "<group>"; };
 		5AA9050F1DCD295600AB7A3B /* UnitFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitFactoryTest.swift; sourceTree = "<group>"; };
 		5AA905121DCD374400AB7A3B /* TeamTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTest.swift; sourceTree = "<group>"; };
-		5AA905181DCD3DA900AB7A3B /* MockTeams.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MockTeams.json; path = ../spike/MockTeams.json; sourceTree = "<group>"; };
+		5AA905181DCD3DA900AB7A3B /* Teams.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Teams.json; sourceTree = "<group>"; };
 		5AA9051B1DCD3F5400AB7A3B /* TeamFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamFactory.swift; sourceTree = "<group>"; };
 		5AA9051E1DCD3F5C00AB7A3B /* TeamFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamFactoryTest.swift; sourceTree = "<group>"; };
 		5ACC05151DBE9DFB00B52D3D /* spike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spike.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,7 +256,7 @@
 		9639BA6F1DC66088000FC95B /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		9639BA721DC660CE000FC95B /* CombatTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombatTest.swift; sourceTree = "<group>"; };
 		9639BA751DC661FA000FC95B /* Activatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activatable.swift; sourceTree = "<group>"; };
-		965B6ED31DCE30DA00C3034B /* MockWeapons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockWeapons.json; sourceTree = "<group>"; };
+		965B6ED31DCE30DA00C3034B /* Weapons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Weapons.json; path = spikeTests/Weapons.json; sourceTree = SOURCE_ROOT; };
 		965B6ED51DCE35F100C3034B /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		969FF7A61DC6296600E44E06 /* Marine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marine.swift; sourceTree = "<group>"; };
 		969FF7A81DC629E900E44E06 /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
@@ -313,6 +313,7 @@
 		5ACC05171DBE9DFB00B52D3D /* spike */ = {
 			isa = PBXGroup;
 			children = (
+				965B6ED91DCE40B900C3034B /* StatImports */,
 				96229BB61DC6A29D00203457 /* Utility */,
 				9639BA2A1DC62E44000FC95B /* Ability.swift */,
 				969FF7A81DC629E900E44E06 /* Inventory.swift */,
@@ -447,8 +448,6 @@
 				9636DD301DC6681D00323BB8 /* MockActivatable.swift */,
 				96229B991DC67CDD00203457 /* MockCommandable.swift */,
 				96229BA21DC6809800203457 /* MockRandomAI.swift */,
-				5AA905181DCD3DA900AB7A3B /* MockTeams.json */,
-				965B6ED31DCE30DA00C3034B /* MockWeapons.json */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -513,6 +512,15 @@
 				9639BA581DC64823000FC95B /* Organic.swift */,
 			);
 			name = Amalgams;
+			sourceTree = "<group>";
+		};
+		965B6ED91DCE40B900C3034B /* StatImports */ = {
+			isa = PBXGroup;
+			children = (
+				5AA905181DCD3DA900AB7A3B /* Teams.json */,
+				965B6ED31DCE30DA00C3034B /* Weapons.json */,
+			);
+			name = StatImports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -628,8 +636,8 @@
 				5ACC05241DBE9DFB00B52D3D /* Main.storyboard in Resources */,
 				5ACC051B1DBE9DFB00B52D3D /* GameScene.sks in Resources */,
 				5ACC05261DBE9DFB00B52D3D /* Assets.xcassets in Resources */,
-				5AA905271DCD486C00AB7A3B /* MockTeams.json in Resources */,
-				965B6ED81DCE3C2700C3034B /* MockWeapons.json in Resources */,
+				5AA905271DCD486C00AB7A3B /* Teams.json in Resources */,
+				965B6ED81DCE3C2700C3034B /* Weapons.json in Resources */,
 				5ACC05291DBE9DFB00B52D3D /* LaunchScreen.storyboard in Resources */,
 				5ACC051D1DBE9DFB00B52D3D /* Actions.sks in Resources */,
 			);
@@ -639,8 +647,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AA9051A1DCD3DA900AB7A3B /* MockTeams.json in Resources */,
-				965B6ED41DCE30DA00C3034B /* MockWeapons.json in Resources */,
+				5AA9051A1DCD3DA900AB7A3B /* Teams.json in Resources */,
+				965B6ED41DCE30DA00C3034B /* Weapons.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@ class Grunt: Organic, Armable, RandomAI, Nameable {
     
     var name: String
     var maxHealth: Int = 8
-    var missChance: Int = 30
+    var dodge: Int = 30
     let inventory: Inventory = Inventory()
     
     var health: Int

@@ -25,6 +25,8 @@
         "clipSize": 2,
         "crit": 6
     },
+    
+    
     "Plasma Pistol": {
         "range": 5,
         "minDamage": 1,

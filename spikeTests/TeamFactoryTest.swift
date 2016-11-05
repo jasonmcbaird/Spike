@@ -12,7 +12,7 @@ import XCTest
 class TeamFactoryTest: XCTestCase {
     
     func testCreateTeams() {
-        let factory = TeamFactory(filename: "MockTeams")
+        let factory = TeamFactory(filename: "Teams")
         
         XCTAssertEqual(factory.teams.keys.first, "North Forge")
         XCTAssertEqual((factory.teams.values.first![0] as! Nameable).name, "Cody")
