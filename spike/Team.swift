@@ -30,6 +30,21 @@ class Team: Sequence {
         }
     }
     
+    func activateNext() {
+        for activatable in self.activatables {
+            if(!activatable.activated) {
+                activatable.activate()
+                return
+            }
+        }
+    }
+    
+    func deactivate() {
+        for activatable in self.activatables {
+            activatable.deactivate()
+        }
+    }
+    
     func makeIterator() -> ActivatableIterator {
         return ActivatableIterator(array: activatables)
     }

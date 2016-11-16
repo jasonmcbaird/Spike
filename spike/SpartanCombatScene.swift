@@ -19,10 +19,6 @@ class SpartanCombatScene {
         var teams = factory.createTeams(filename: "MockTeams")
         humans = teams["North Forge"]
         aliens = teams["Violet Squad"]
-        for human in humans {
-            let progressBar = UIProgressView()
-            HealthBarBinding(progressBar: progressBar, damageable: human as! Damageable)
-        }
     }
     
 }

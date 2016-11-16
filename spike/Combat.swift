@@ -75,18 +75,14 @@ class Combat {
     
     func endRound() {
         for team in teams {
-            for activatable in team {
-                activatable.deactivate()
-            }
+            team.deactivate()
         }
     }
     
     private func canStillActivate() -> Bool {
         for team in teams {
-            for activatable in team {
-                if(!activatable.activated) {
-                    return true
-                }
+            if(team.isActive()) {
+                return true
             }
         }
         return false
