@@ -28,8 +28,6 @@ class CombatTest: XCTestCase {
         
         combat.startCombat()
         
-        // TODO: Wait for Combat queue
-        
         XCTAssertFalse(red.isActive())
         XCTAssertEqual((blue[0] as! MockActivatable).turnCount, 4)
     }

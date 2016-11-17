@@ -12,7 +12,7 @@ class Combat {
     
     var teams: [Team]
     var startTurnClosures: [() -> ()] = []
-    var endTurnWait = 1
+    var endTurnWait = 0
     
     private var maxTeamSize: Int {
         get {
@@ -42,12 +42,16 @@ class Combat {
         self.teams = teams
     }
     
-    func startCombat() {
+    func startAsynchronousCombat() {
         DispatchQueue.init(label: "Combat").async {
-            while(self.survivingTeamCount > 1) {
-                self.startRound()
-                self.endRound()
-            }
+            self.startCombat()
+        }
+    }
+    
+    func startCombat() {
+        while(self.survivingTeamCount > 1) {
+            startRound()
+            endRound()
         }
     }
     
