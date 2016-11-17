@@ -18,10 +18,6 @@ class SpartanCombatScene {
     init() {
         humans = factory.teams["North Forge"]
         aliens = factory.teams["Violet Squad"]
-        for human in humans {
-            let progressBar = UIProgressView()
-            HealthBarBinding(progressBar: progressBar, damageable: human as! Damageable)
-        }
     }
     
 }

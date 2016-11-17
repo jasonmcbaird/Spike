@@ -11,8 +11,6 @@
 		5A6C01681DBECF4900E845ED /* Fightable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C01661DBECEE500E845ED /* Fightable.swift */; };
 		5AA905071DCD247F00AB7A3B /* SpartanCombatScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA905061DCD247F00AB7A3B /* SpartanCombatScene.swift */; };
 		5AA905081DCD247F00AB7A3B /* SpartanCombatScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA905061DCD247F00AB7A3B /* SpartanCombatScene.swift */; };
-		5AA9050A1DCD24B900AB7A3B /* HealthBarBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA905091DCD24B900AB7A3B /* HealthBarBinding.swift */; };
-		5AA9050B1DCD24B900AB7A3B /* HealthBarBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA905091DCD24B900AB7A3B /* HealthBarBinding.swift */; };
 		5AA9050D1DCD294700AB7A3B /* UnitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9050C1DCD294700AB7A3B /* UnitFactory.swift */; };
 		5AA9050E1DCD294700AB7A3B /* UnitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9050C1DCD294700AB7A3B /* UnitFactory.swift */; };
 		5AA905111DCD295600AB7A3B /* UnitFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9050F1DCD295600AB7A3B /* UnitFactoryTest.swift */; };
@@ -168,7 +166,6 @@
 /* Begin PBXFileReference section */
 		5A6C01661DBECEE500E845ED /* Fightable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fightable.swift; sourceTree = "<group>"; };
 		5AA905061DCD247F00AB7A3B /* SpartanCombatScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpartanCombatScene.swift; sourceTree = "<group>"; };
-		5AA905091DCD24B900AB7A3B /* HealthBarBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthBarBinding.swift; sourceTree = "<group>"; };
 		5AA9050C1DCD294700AB7A3B /* UnitFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitFactory.swift; sourceTree = "<group>"; };
 		5AA9050F1DCD295600AB7A3B /* UnitFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitFactoryTest.swift; sourceTree = "<group>"; };
 		5AA905121DCD374400AB7A3B /* TeamTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTest.swift; sourceTree = "<group>"; };
@@ -321,7 +318,6 @@
 				9639BA6F1DC66088000FC95B /* Team.swift */,
 				9636DD3B1DC6721F00323BB8 /* AmmoCost.swift */,
 				5AA905061DCD247F00AB7A3B /* SpartanCombatScene.swift */,
-				5AA905091DCD24B900AB7A3B /* HealthBarBinding.swift */,
 				5AD96F951DBEB2F6005D4AFF /* Factories */,
 				5AD96F821DBEB0E1005D4AFF /* Enums */,
 				5ACC05761DBEAF1B00B52D3D /* Protocols */,
@@ -680,7 +676,6 @@
 				96229BAE1DC6916100203457 /* Shielded.swift in Sources */,
 				5AA905071DCD247F00AB7A3B /* SpartanCombatScene.swift in Sources */,
 				969FF7AB1DC62A2500E44E06 /* Item.swift in Sources */,
-				5AA9050A1DCD24B900AB7A3B /* HealthBarBinding.swift in Sources */,
 				5ACC051F1DBE9DFB00B52D3D /* GameScene.swift in Sources */,
 				9639BA501DC6435A000FC95B /* Missable.swift in Sources */,
 				9639BA761DC661FA000FC95B /* Activatable.swift in Sources */,
@@ -782,7 +777,6 @@
 				9639BA571DC64501000FC95B /* Attack.swift in Sources */,
 				9639BA621DC64E17000FC95B /* RandomizerTest.swift in Sources */,
 				9639BA381DC632E5000FC95B /* ArmableTest.swift in Sources */,
-				5AA9050B1DCD24B900AB7A3B /* HealthBarBinding.swift in Sources */,
 				5AD96FA71DBEC145005D4AFF /* CostFactory.swift in Sources */,
 				9639BA6B1DC65FC0000FC95B /* Grunt.swift in Sources */,
 				9639BA481DC63DF3000FC95B /* InventoryTest.swift in Sources */,
