@@ -18,7 +18,7 @@ class TeamFactory {
         teams = createTeams(dictionary: JSON.parseJSON(filename: filename))
     }
     
-    private func createTeams(dictionary: [String: Any]) -> [String: Team] {
+    func createTeams(dictionary: [String: Any]) -> [String: Team] {
         var result: [String: Team] = [:]
         for teamName in dictionary.keys {
             let team = parseTeam(name: teamName, dictionary: dictionary[teamName] as! [String: Any])
